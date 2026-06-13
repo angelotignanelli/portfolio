@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio Home — 4 Opciones</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --serif:"Crimson Text","Times New Roman",serif;
+  --body:"Inter",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",monospace;
+}
+body{background:#1C1C1C;font-family:var(--body);-webkit-font-smoothing:antialiased;}
+
+/* ── canvas shell ── */
+.canvas{padding:48px;}
+.canvas-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:40px;gap:20px;
+}
+.canvas-head h1{
+  font-family:var(--serif);font-weight:700;
+  font-size:32px;letter-spacing:-.02em;color:#E6E5E3;
+}
+.canvas-head p{font-size:13px;color:#666;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+
+/* ── artboard wrapper ── */
+.artboard{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;}
+.artboard:hover{transform:translateY(-4px);box-shadow:0 32px 64px -24px rgba(0,0,0,.7);}
+.artboard-label{
+  position:absolute;bottom:14px;left:14px;
+  background:rgba(0,0,0,.72);backdrop-filter:blur(8px);
+  border-radius:8px;padding:7px 13px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:#E6E5E3;pointer-events:none;z-index:10;
+}
+.artboard-letter{
+  position:absolute;top:14px;left:14px;
+  width:32px;height:32px;background:rgba(0,0,0,.6);
+  border-radius:8px;display:grid;place-items:center;
+  font-family:var(--serif);font-weight:700;font-size:18px;color:#E6E5E3;
+  pointer-events:none;z-index:10;
+}
+.frame{
+  width:1440px;
+  transform-origin:top left;
+  pointer-events:none;
+  user-select:none;
+}
+
+/* ── fullscreen overlay ── */
+.overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.88);
+  display:none;z-index:100;
+  align-items:center;justify-content:center;padding:32px;
+}
+.overlay.open{display:flex;}
+.overlay-inner{
+  position:relative;border-radius:20px;overflow:hidden;
+  max-width:calc(100vw - 64px);max-height:calc(100vh - 64px);
+  box-shadow:0 40px 80px rgba(0,0,0,.8);
+}
+.overlay-inner .frame{height:auto;}
+.overlay-close{
+  position:fixed;top:24px;right:24px;
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  color:#fff;font-size:20px;cursor:pointer;
+  display:grid;place-items:center;z-index:101;
+  transition:background .15s;
+}
+.overlay-close:hover{background:rgba(255,255,255,.2);}
+.overlay-lbl{
+  position:fixed;bottom:32px;left:50%;transform:translateX(-50%);
+  background:rgba(0,0,0,.72);backdrop-filter:blur(10px);
+  border-radius:10px;padding:10px 20px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;color:#E6E5E3;pointer-events:none;z-index:101;
+}
+
+/* ────────────────────────────────────────────
+   A · Editorial / cream / list
+──────────────────────────────────────────── */
+.a-wrap{font-family:var(--body);background:#F5F2EB;width:1440px;}
+.a-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 64px;border-bottom:1px solid rgba(0,0,0,.1);}
+.a-dot{width:36px;height:36px;border-radius:9px;border:1.5px solid rgba(0,0,0,.5);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;flex-shrink:0;}
+.a-navlinks{display:flex;gap:28px;font-size:14px;color:#555;align-items:center;}
+.a-hero{padding:72px 64px 0;}
+.a-herorow{display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:end;}
+.a-name{font-family:var(--serif);font-weight:700;font-size:160px;line-height:.87;letter-spacing:-.04em;color:#111;}
+.a-name em{font-style:italic;color:#bbb;}
+.a-stats{display:flex;flex-direction:column;gap:22px;padding-bottom:10px;}
+.a-stat-k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#aaa;margin-bottom:5px;}
+.a-stat-v{font-size:14px;color:#555;}
+.a-strip{border-top:1px solid rgba(0,0,0,.1);margin-top:44px;padding:20px 0;display:flex;justify-content:space-between;align-items:center;}
+.a-bio{font-size:16px;line-height:1.55;color:#777;font-weight:300;max-width:55ch;}
+.a-logos{border-top:1px solid rgba(0,0,0,.08);border-bottom:1px solid rgba(0,0,0,.08);padding:18px 0;display:flex;gap:28px;align-items:center;margin-top:0;}
+.a-logolbl{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#bbb;margin-right:12px;}
+.a-work{margin-top:52px;}
+.a-work-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px;}
+.a-work-h2{font-family:var(--serif);font-weight:700;font-size:52px;letter-spacing:-.03em;line-height:1;color:#111;}
+.a-row{display:grid;grid-template-columns:52px 1fr 200px 68px 38px;align-items:center;gap:0 24px;padding:20px 0;border-bottom:1px solid rgba(0,0,0,.08);}
+.a-row-num{font-family:var(--mono);font-size:11px;color:#ccc;letter-spacing:.1em;}
+.a-row-name{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1;letter-spacing:-.02em;color:#111;}
+.a-row-type{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#aaa;text-align:right;}
+.a-row-yr{font-family:var(--mono);font-size:11px;color:#ccc;}
+.a-arw{width:32px;height:32px;border-radius:50%;border:1px solid rgba(0,0,0,.25);display:grid;place-items:center;}
+
+/* ────────────────────────────────────────────
+   B · Split dark/light
+──────────────────────────────────────────── */
+.b-wrap{font-family:var(--body);width:1440px;display:grid;grid-template-rows:auto 1fr;}
+.b-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 64px;background:#1A1A1A;border-bottom:1px solid rgba(255,255,255,.08);}
+.b-body{display:grid;grid-template-columns:480px 1fr;min-height:852px;}
+.b-left{background:#1A1A1A;color:#E6E5E3;padding:72px 56px;display:flex;flex-direction:column;justify-content:space-between;}
+.b-name{font-family:var(--serif);font-weight:700;font-size:86px;line-height:.88;letter-spacing:-.04em;}
+.b-name em{font-style:italic;color:rgba(230,229,227,.3);}
+.b-bio{font-size:16px;line-height:1.6;color:rgba(230,229,227,.6);font-weight:300;margin-bottom:40px;}
+.b-statrow{display:flex;justify-content:space-between;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);margin-top:0;}
+.b-right{background:#F0EEEA;padding:72px 52px;}
+.b-rhead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px;}
+.b-rh2{font-family:var(--serif);font-weight:700;font-size:34px;letter-spacing:-.02em;}
+.b-card{background:#fff;border-radius:12px;padding:18px 22px;display:flex;align-items:center;gap:18px;border:1px solid rgba(0,0,0,.07);margin-bottom:10px;}
+.b-dot{width:40px;height:40px;border-radius:10px;flex-shrink:0;}
+.b-card-name{font-weight:600;font-size:16px;letter-spacing:-.01em;}
+.b-card-type{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#999;margin-top:3px;}
+
+/* ────────────────────────────────────────────
+   C · Magazine bold / amarillo
+──────────────────────────────────────────── */
+.c-wrap{font-family:var(--body);background:#fff;width:1440px;}
+.c-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 64px;border-bottom:2px solid #111;}
+.c-hero{background:#FFD146;padding:52px 64px 44px;display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #111;}
+.c-heroname{font-family:var(--serif);font-weight:700;font-size:118px;line-height:.87;letter-spacing:-.04em;color:#111;}
+.c-herokicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:18px;}
+.c-herostat{text-align:right;padding-bottom:6px;}
+.c-herostat-k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,20,20,.4);margin-bottom:4px;}
+.c-herostat-n{font-family:var(--serif);font-weight:700;font-size:64px;line-height:1;letter-spacing:-.04em;}
+.c-grid{padding:44px 64px 0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+.c-tile{border-radius:14px;padding:26px 20px 22px;display:flex;flex-direction:column;justify-content:space-between;min-height:172px;}
+.c-tile-n{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;}
+.c-tile-name{font-family:var(--serif);font-weight:700;font-size:28px;line-height:1.05;letter-spacing:-.02em;margin-bottom:8px;}
+.c-tile-type{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;opacity:.55;line-height:1.4;}
+.c-about{margin:36px 64px 0;padding:28px 0;border-top:1px solid #E0E0E0;border-bottom:1px solid #E0E0E0;display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:start;}
+.c-about-h2{font-family:var(--serif);font-weight:700;font-size:42px;letter-spacing:-.03em;line-height:1.05;margin-top:22px;}
+.c-about-p{font-size:16px;line-height:1.65;color:#666;font-weight:300;margin-top:34px;}
+
+/* ────────────────────────────────────────────
+   D · Minimal Swiss / neutral
+──────────────────────────────────────────── */
+.d-wrap{font-family:var(--body);background:#FAFAFA;width:1440px;}
+.d-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 64px;border-bottom:1px solid #E5E5E5;}
+.d-hero{padding:76px 64px 0;display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:end;}
+.d-status{display:flex;align-items:center;gap:10px;margin-bottom:24px;}
+.d-dot{width:8px;height:8px;border-radius:50%;background:#4CAF50;}
+.d-name{font-family:var(--serif);font-weight:700;font-size:138px;line-height:.88;letter-spacing:-.04em;color:#111;}
+.d-name span{color:#C5C0B8;font-style:italic;}
+.d-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px;}
+.d-chip{border:1px solid #DDD;border-radius:99px;padding:6px 14px;font-size:13px;color:#777;}
+.d-sidebar{padding-bottom:14px;}
+.d-sbio{font-size:17px;line-height:1.68;color:#777;font-weight:300;border-top:1px solid #E5E5E5;padding-top:22px;}
+.d-table{padding:50px 64px 0;}
+.d-thead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #E5E5E5;padding-bottom:13px;margin-bottom:0;}
+.d-thead-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#BBB;}
+.d-trow{display:grid;grid-template-columns:44px 1fr 220px 18px 32px;align-items:center;gap:0 18px;padding:17px 0;border-bottom:1px solid #F0F0F0;}
+.d-tnum{font-family:var(--mono);font-size:11px;color:#CCC;}
+.d-tname{font-family:var(--serif);font-weight:700;font-size:34px;letter-spacing:-.02em;color:#111;line-height:1;}
+.d-ttype{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#CCC;text-align:right;}
+.d-tacc{width:12px;height:12px;border-radius:3px;}
+</style>
+</head>
+<body>
+
+<div class="canvas">
+  <div class="canvas-head">
+    <h1>Portfolio Home — 4 Opciones</h1>
+    <p>Hacé click en cada opción para ver en pantalla completa · ESC para cerrar</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- A -->
+    <div class="artboard" onclick="open_overlay('a')">
+      <div class="artboard-letter">A</div>
+      <div class="artboard-label">A · Editorial / cream</div>
+      <div id="frame-a" class="frame"></div>
+    </div>
+
+    <!-- B -->
+    <div class="artboard" onclick="open_overlay('b')">
+      <div class="artboard-letter">B</div>
+      <div class="artboard-label">B · Split dark / light</div>
+      <div id="frame-b" class="frame"></div>
+    </div>
+
+    <!-- C -->
+    <div class="artboard" onclick="open_overlay('c')">
+      <div class="artboard-letter">C</div>
+      <div class="artboard-label">C · Magazine bold / amarillo</div>
+      <div id="frame-c" class="frame"></div>
+    </div>
+
+    <!-- D -->
+    <div class="artboard" onclick="open_overlay('d')">
+      <div class="artboard-letter">D</div>
+      <div class="artboard-label">D · Minimal / Swiss</div>
+      <div id="frame-d" class="frame"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="e=>{if(e.target===this)close_overlay()}">
+  <button class="overlay-close" onclick="close_overlay()">✕</button>
+  <div class="overlay-inner" id="overlay-inner"></div>
+  <div class="overlay-lbl" id="overlay-lbl"></div>
+</div>
+
+<script>
+const projs = [
+  {n:'01',name:'We Join', type:'UX / UI · Product',  acc:'#FFD146',ink:'#141414'},
+  {n:'02',name:'Zerenly', type:'UX / UI · Health',   acc:'#5B2EAA',ink:'#fff'},
+  {n:'03',name:'Henry',   type:'UX / UI · Edtech',   acc:'#6D4DF2',ink:'#fff'},
+  {n:'04',name:'Grido',   type:'Product audit · UI', acc:'#0089FF',ink:'#fff'},
+  {n:'05',name:'Grape',   type:'UX / UI · Fintech',  acc:'#7C5CFC',ink:'#fff'},
+];
+
+const arrow = `<svg width="13" height="10" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg>`;
+
+function buildA(){
+  return `<div class="a-wrap">
+  <div class="a-nav">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="a-dot">AT</div>
+      <b style="font-size:15px;letter-spacing:-.01em">Angelo Tignanelli</b>
+    </div>
+    <div class="a-navlinks"><span>Work</span><span>About</span><span style="font-weight:600;color:#111">Contact</span>
+      <span style="border-left:1px solid rgba(0,0,0,.15);padding-left:18px;font-family:var(--mono);font-size:11px;color:#bbb;letter-spacing:.06em">EN / ES</span></div>
+  </div>
+  <div class="a-hero">
+    <div class="a-herorow">
+      <h1 class="a-name">Angelo<br><em>Tignanelli</em></h1>
+      <div class="a-stats">
+        ${[['Role','Senior Product Designer'],['Based','Buenos Aires, AR'],['Exp','5+ yrs · 25+ startups'],['Status','● Open to work']].map(([k,v])=>
+          `<div><div class="a-stat-k">${k}</div><div class="a-stat-v">${v}</div></div>`).join('')}
+      </div>
+    </div>
+    <div class="a-strip">
+      <p class="a-bio">A Product Designer who believes the best product aligns the business and the user equally — understanding limitations as design opportunities.</p>
+      <div style="display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#bbb;flex-shrink:0">
+        <span style="width:28px;height:1px;background:#ccc;display:block"></span>Selected work</div>
+    </div>
+    <div class="a-logos">
+      <span class="a-logolbl">Worked with</span>
+      <span style="color:#F7541C;font-weight:800;font-size:16px;opacity:.65">QIRA</span>
+      <span style="color:#3D3D3D;font-weight:900;font-size:16px;opacity:.65">MODO</span>
+      <span style="color:#0084C5;font-weight:800;font-size:16px;opacity:.65">OSDE</span>
+      <span style="color:#F58A1F;font-weight:700;font-size:16px;opacity:.65">UILS</span>
+      <span style="color:#E70000;font-weight:800;font-size:16px;opacity:.65">Claro</span>
+    </div>
+    <div class="a-work">
+      <div class="a-work-head">
+        <span class="a-work-h2">Selected work</span>
+        <span style="font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#bbb">05 case studies</span>
+      </div>
+      <div style="border-top:1px solid rgba(0,0,0,.1)">
+        ${projs.map(p=>`<div class="a-row">
+          <span class="a-row-num">${p.n}</span>
+          <span class="a-row-name">${p.name}</span>
+          <span class="a-row-type">${p.type}</span>
+          <span class="a-row-yr">2022</span>
+          <div class="a-arw">${arrow}</div>
+        </div>`).join('')}
+      </div>
+    </div>
+  </div>
+</div>`;
+}
+
+function buildB(){
+  return `<div class="b-wrap">
+  <div class="b-nav">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:36px;height:36px;border-radius:9px;border:1.5px solid rgba(255,255,255,.35);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#fff">AT</div>
+      <b style="font-size:15px;color:#fff;font-weight:500">Angelo Tignanelli</b>
+    </div>
+    <div style="display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.5)">
+      <span>Work</span><span>About</span><span style="font-weight:600;color:#fff">Contact</span>
+      <span style="border-left:1px solid rgba(255,255,255,.12);padding-left:18px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;opacity:.4">EN / ES</span></div>
+  </div>
+  <div class="b-body">
+    <div class="b-left">
+      <div>
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(230,229,227,.4);margin-bottom:28px">Senior Product Designer</div>
+        <h1 class="b-name">Angelo<br><em>Tignanelli</em></h1>
+      </div>
+      <div>
+        <p class="b-bio">A Product Designer who believes the best product aligns the business and the user equally — understanding limitations as design opportunities.</p>
+        ${[['Experience','5+ years · 25+ startups'],['Based in','Buenos Aires, AR'],['Status','● Open to work']].map(([k,v])=>
+          `<div class="b-statrow"><span style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,229,227,.3)">${k}</span><span style="font-size:13px;color:rgba(230,229,227,.65)">${v}</span></div>`).join('')}
+      </div>
+    </div>
+    <div class="b-right">
+      <div class="b-rhead">
+        <span class="b-rh2">Selected work</span>
+        <span style="font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#999">05 projects</span>
+      </div>
+      ${projs.map(p=>`<div class="b-card">
+        <div class="b-dot" style="background:${p.acc}"></div>
+        <div style="flex:1">
+          <div class="b-card-name">${p.name}</div>
+          <div class="b-card-type">${p.type}</div>
+        </div>
+        ${arrow.replace('currentColor','#ccc')}
+      </div>`).join('')}
+      <div class="b-card" style="opacity:.35">
+        <div class="b-dot" style="background:#E9E9E9"></div>
+        <div style="flex:1"><div class="b-card-name">Pinamed</div><div class="b-card-type">UX / UI · Health · Soon</div></div>
+      </div>
+    </div>
+  </div>
+</div>`;
+}
+
+function buildC(){
+  return `<div class="c-wrap">
+  <div class="c-nav">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:36px;height:36px;border-radius:8px;background:#111;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#fff">AT</div>
+      <b style="font-size:15px;font-weight:700;letter-spacing:-.01em">Angelo Tignanelli</b>
+    </div>
+    <div style="display:flex;gap:24px;font-size:13px;align-items:center">
+      <span style="color:#555">Work</span><span style="color:#555">About</span>
+      <span style="background:#FFD146;padding:6px 14px;border-radius:6px;font-weight:600">Contact</span>
+      <span style="border-left:1px solid #E5E5E5;padding-left:18px;font-family:var(--mono);font-size:11px;color:#bbb;letter-spacing:.06em">EN / ES</span>
+    </div>
+  </div>
+  <div class="c-hero">
+    <div>
+      <div class="c-herokicker">Senior Product Designer · Buenos Aires</div>
+      <h1 class="c-heroname">Angelo<br>Tignanelli</h1>
+    </div>
+    <div class="c-herostat">
+      <div class="c-herostat-k">Years of experience</div>
+      <div class="c-herostat-n">5+</div>
+      <div style="font-size:14px;color:#555;font-weight:300;margin-top:4px">25+ startups</div>
+    </div>
+  </div>
+  <div class="c-grid">
+    ${projs.map(p=>`<div class="c-tile" style="background:${p.acc};color:${p.ink}">
+      <div class="c-tile-n">${p.n}</div>
+      <div>
+        <div class="c-tile-name">${p.name}</div>
+        <div class="c-tile-type">${p.type}</div>
+      </div>
+    </div>`).join('')}
+  </div>
+  <div class="c-about">
+    <div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#bbb">About</div>
+      <h2 class="c-about-h2">Design that moves needles.</h2>
+    </div>
+    <p class="c-about-p">As a Senior Product Designer, I've led projects where going to market, attracting investment, or pivoting a business model are common currency. Five years of work with more than 25 startups seeking their first MVP — always in search of new challenges that push my limits.</p>
+  </div>
+</div>`;
+}
+
+function buildD(){
+  return `<div class="d-wrap">
+  <div class="d-nav">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:32px;height:32px;border-radius:7px;border:1px solid #CCC;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:13px;color:#333">AT</div>
+      <span style="font-weight:500;font-size:14px;color:#222">Angelo Tignanelli</span>
+    </div>
+    <div style="display:flex;gap:24px;font-size:13px;color:#999;align-items:center">
+      <span>Work</span><span>About</span><span style="color:#222;font-weight:500">Contact</span>
+      <span style="border-left:1px solid #E5E5E5;padding-left:18px;font-family:var(--mono);font-size:11px;letter-spacing:.05em">EN / ES</span>
+    </div>
+  </div>
+  <div class="d-hero">
+    <div>
+      <div class="d-status">
+        <div class="d-dot"></div>
+        <span style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#999">Open to work</span>
+      </div>
+      <h1 class="d-name">Angelo<br><span>Tignanelli</span></h1>
+      <div class="d-chips">
+        ${['Product Design','UX Research','UI Systems','Mentoring'].map(t=>`<span class="d-chip">${t}</span>`).join('')}
+      </div>
+    </div>
+    <div class="d-sidebar">
+      <p class="d-sbio">A Product Designer who believes the best product aligns the business and the user equally — understanding limitations as design opportunities. 5+ years of work with more than 25 startups. Based in Buenos Aires.</p>
+    </div>
+  </div>
+  <div class="d-table">
+    <div class="d-thead">
+      <span class="d-thead-lbl">Selected work</span>
+      <span class="d-thead-lbl" style="color:#DDD">05 case studies</span>
+    </div>
+    ${projs.map(p=>`<div class="d-trow">
+      <span class="d-tnum">${p.n}</span>
+      <span class="d-tname">${p.name}</span>
+      <span class="d-ttype">${p.type}</span>
+      <div class="d-tacc" style="background:${p.acc};margin-left:auto"></div>
+      ${arrow.replace('currentColor','#CCC')}
+    </div>`).join('')}
+  </div>
+</div>`;
+}
+
+/* ── render frames at 50% scale ── */
+const SCALE = 0.5;
+function renderFrame(id, html){
+  const wrap = document.getElementById('frame-'+id);
+  wrap.innerHTML = html;
+  const inner = wrap.firstElementChild;
+  const h = inner.offsetHeight || 900;
+  inner.style.transformOrigin = 'top left';
+  inner.style.transform = `scale(${SCALE})`;
+  wrap.style.height = (h * SCALE) + 'px';
+  wrap.style.overflow = 'hidden';
+}
+
+const labels = {a:'A · Editorial / Cream',b:'B · Split dark / light',c:'C · Magazine bold',d:'D · Minimal / Swiss'};
+
+window.addEventListener('load', ()=>{
+  renderFrame('a', buildA());
+  renderFrame('b', buildB());
+  renderFrame('c', buildC());
+  renderFrame('d', buildD());
+});
+
+/* ── overlay ── */
+window.open_overlay = function(id){
+  const html = {a:buildA, b:buildB, c:buildC, d:buildD}[id]();
+  const inner = document.getElementById('overlay-inner');
+  inner.innerHTML = html;
+  const el = inner.firstElementChild;
+  const vw = window.innerWidth - 64;
+  const vh = window.innerHeight - 64;
+  const scale = Math.min(vw/1440, vh/900);
+  el.style.transformOrigin = 'top left';
+  el.style.transform = `scale(${scale})`;
+  inner.style.width = (1440*scale)+'px';
+  inner.style.height = (el.offsetHeight * scale)+'px';
+  document.getElementById('overlay-lbl').textContent = labels[id];
+  const ov = document.getElementById('overlay');
+  ov.classList.add('open');
+  ov.onclick = e=>{ if(e.target===ov) close_overlay(); };
+};
+window.close_overlay = function(){
+  document.getElementById('overlay').classList.remove('open');
+  document.getElementById('overlay-inner').innerHTML = '';
+};
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') close_overlay(); });
+</script>
+</body>
+</html>
