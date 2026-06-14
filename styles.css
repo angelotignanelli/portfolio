@@ -62,8 +62,9 @@ a{color:inherit;}
   backdrop-filter:none;
   -webkit-backdrop-filter:none;
   border-bottom:1px solid transparent;
-  transition:background .35s ease, border-color .35s ease;
+  transition:background .35s ease, border-color .35s ease, transform .35s ease;
 }
+.nav--hidden{ transform:translateY(-100%); }
 .nav.nav--scrolled{
   background:rgba(240,240,240,0.88);
   backdrop-filter:saturate(150%) blur(12px);
