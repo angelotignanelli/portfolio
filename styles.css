@@ -664,6 +664,9 @@ a{color:inherit;}
   /* About */
   .about-grid{ padding-left:20px; padding-right:20px; }
 
+  /* Hide card corner arrows on mobile */
+  .card .corner{ display:none; }
+
   /* Card body fix for narrow screens */
   .card .body{ width:auto; flex-shrink:1; min-width:0; }
   .card.wide .body{ width:auto; }
