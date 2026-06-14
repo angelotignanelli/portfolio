@@ -640,12 +640,20 @@ a{color:inherit;}
   .cs-hero-bg{ height:200px; }
 
   /* Reduce large desktop margins for mobile */
-  .logos{ margin-top:40px; margin-bottom:40px; }
+  .logos{ display:none; }
   .sec-head{ margin:40px 0 28px; }
   .sec-head .t{ font-size:clamp(28px,7vw,84px); }
   .about{ margin-top:60px; }
   .blog{ margin-top:60px; padding-bottom:48px; }
   .blog .ttl{ font-size:clamp(36px,11vw,80px); margin-bottom:-24px; }
+
+  /* Hero: smaller name, tighter subtitle */
+  .hero h1 .outline,
+  .hero h1 .filled{ font-size:clamp(40px,11vw,164px); }
+  .hero .sub{ font-size:16px; margin-top:20px; }
+
+  /* About: smaller lead text */
+  .about .lead{ font-size:20px; }
 
   /* About */
   .about-grid{ padding-left:20px; padding-right:20px; }
