@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=10">
+<link rel="stylesheet" href="styles.css?v=39">
 <link rel="stylesheet" href="cs.css?v=5">
 </head>
 <body data-screen-label="Home">
@@ -68,7 +68,7 @@
     if(!filled || !stripe) return;
     const r = filled.getBoundingClientRect();
     const heroR = document.querySelector('.hero').getBoundingClientRect();
-    const bandH = r.height * 0.50 - 10;
+    const bandH = r.height * 1.0 - 20;
     const top = r.top - heroR.top + (r.height - bandH) / 2;
     stripe.style.top = top + 'px';
     stripe.style.height = bandH + 'px';
@@ -98,12 +98,12 @@
     <section class="work">
 
       <!-- WeJoin -->
-      <a class="card wide" href="wejoin.html" data-screen-label="Card · WeJoin" style="min-height:388px; margin-top:24px;">
+      <a class="card wide card--wejoin" href="wejoin.html" data-screen-label="Card · WeJoin" style="min-height:388px; margin-top:24px;">
         <span class="corner" style="position:absolute; bottom:24px; left:40px; z-index:5;"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
         <div class="body">
           <span class="ix"><span data-lang="en">01 · UX / UI · Product</span><span data-lang="es">01 · UX / UI · Producto</span></span>
           <h3><span data-lang="en">We Join, low cost domestic services</span><span data-lang="es">We Join, servicios domésticos low cost</span></h3>
-          <p><span data-lang="en">A platform that allows you to find home services such as repairs, painting jobs, pool maintenance, gas fitting, electrician services, and more, and to digitally track the service from the beginning to the end.</span><span data-lang="es">Una plataforma para encontrar servicios del hogar como arreglos, pintura, plomería, electricidad y más, y seguir cada trabajo de principio a fin.</span></p>
+          <p><span data-lang="en">Find and track home services — repairs, painting, plumbing, and more.</span><span data-lang="es">Encontrá y seguí servicios del hogar: arreglos, pintura, plomería y más.</span></p>
         </div>
         <div class="art">
           <img src="../portfolio-angelo/assets/card-wejoin.png" alt="WeJoin mockup" loading="lazy"
@@ -115,12 +115,12 @@
       <div class="card-row card-row--h">
 
       <!-- Zerenly -->
-      <a class="card" href="zerenly.html" data-screen-label="Card · Zerenly">
+      <a class="card card--zerenly" href="zerenly.html" data-screen-label="Card · Zerenly">
         <span class="corner" style="position:absolute; bottom:24px; left:36px; z-index:5;"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
         <div class="body" style="width:auto; flex:1; min-width:0;">
           <span class="ix"><span data-lang="en">02 · UX / UI · Health</span><span data-lang="es">02 · UX / UI · Salud</span></span>
           <h3><span data-lang="en">Zerenly, emotional support platform</span><span data-lang="es">Zerenly, plataforma de apoyo emocional</span></h3>
-          <p><span data-lang="en">Mental health and emotional well-being services for people who need individual or group support when going through a personal crisis.</span><span data-lang="es">Servicios de salud mental y bienestar para quienes necesitan apoyo individual o grupal ante una crisis personal.</span></p>
+          <p><span data-lang="en">Mental health support for people who need individual or group help through a personal crisis.</span><span data-lang="es">Apoyo emocional individual o grupal para atravesar una crisis personal.</span></p>
         </div>
         <div class="art" style="flex:none; width:45%;">
           <img src="../portfolio-angelo/assets/card-zerenly.png" alt="Zerenly mockup" loading="lazy"
@@ -129,7 +129,7 @@
       </a>
 
       <!-- Grape -->
-      <a class="card card--col" href="grape.html" data-screen-label="Card · Grape" style="overflow:hidden; aspect-ratio:1;">
+      <a class="card card--col card--grape" href="grape.html" data-screen-label="Card · Grape" style="overflow:hidden; aspect-ratio:1;">
         <span class="corner" style="position:absolute; top:24px; right:24px; z-index:5;"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
         <div class="body" style="padding:24px 24px 12px;">
           <span class="ix"><span data-lang="en">05 · UX / UI · Fintech</span><span data-lang="es">05 · UX / UI · Fintech</span></span>
@@ -145,12 +145,12 @@
       </div><!-- end Zerenly+Grape row -->
 
       <!-- Grido -->
-      <a class="card wide" href="grido.html" data-screen-label="Card · Grido">
+      <a class="card wide card--grido" href="grido.html" data-screen-label="Card · Grido">
         <span class="corner" style="position:absolute; bottom:24px; left:40px; z-index:5;"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
         <div class="body">
           <span class="ix"><span data-lang="en">04 · Product audit · UI</span><span data-lang="es">04 · Auditoría de producto · UI</span></span>
           <h3><span data-lang="en">Grido, the 4th biggest ice cream producer</span><span data-lang="es">Grido, la heladería gigante</span></h3>
-          <p><span data-lang="en">The fourth largest ice cream parlor in the world, with a presence throughout Latin America and Europe, which now also offers frozen food production for marketing.</span><span data-lang="es">La cuarta heladería más grande del mundo, con presencia en toda Latinoamérica y Europa, que ahora ofrece producción de alimentos congelados para marketing.</span></p>
+          <p><span data-lang="en">4th largest ice cream chain in the world, present across Latin America and Europe.</span><span data-lang="es">La cuarta heladería más grande del mundo, con presencia en toda Latinoamérica y Europa.</span></p>
         </div>
         <div class="art" style="aspect-ratio:2660/1788;">
           <img src="../portfolio-angelo/assets/card-grido.png" alt="Grido mockup" loading="lazy"
@@ -162,7 +162,7 @@
       <div class="card-row">
 
       <!-- Henry -->
-      <a class="card card--col" href="henry.html" data-screen-label="Card · Henry">
+      <a class="card card--col card--henry" href="henry.html" data-screen-label="Card · Henry">
         <span class="corner" style="position:absolute; top:24px; right:24px; z-index:5;"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
         <div class="body">
           <span class="ix"><span data-lang="en">03 · UX / UI · Edtech</span><span data-lang="es">03 · UX / UI · Edtech</span></span>
@@ -176,18 +176,19 @@
       </a>
 
       <!-- Pinamed -->
-      <a class="card card--col" href="#" data-screen-label="Card · Pinamed" style="cursor:default; pointer-events:none; aspect-ratio:1;">
-        <span class="badge"><span data-lang="en">Soon</span><span data-lang="es">Pronto</span></span>
-        <div class="body">
-          <span class="ix"><span data-lang="en">06 · UX / UI · Health</span><span data-lang="es">06 · UX / UI · Salud</span></span>
-          <h3>Pinamed</h3>
-          <p><span data-lang="en">A banking platform centered in a senior public with accessibility problems.</span><span data-lang="es">Una plataforma para encontrar y reservar turnos médicos.</span></p>
-        </div>
-        <div class="art" style="opacity:.6;">
-          <img src="../portfolio-angelo/assets/card-pinamed.png" alt="Pinamed mockup" loading="lazy"
-               style="position:absolute; top:0; bottom:0; left:36px; right:36px; width:calc(100% - 72px); object-fit:contain; object-position:top center;">
-        </div>
-      </a>
+      <div class="pinamed-wrap">
+        <a class="card card--col" href="#" data-screen-label="Card · Pinamed" style="cursor:default; pointer-events:none; aspect-ratio:1;">
+          <span class="badge"><span data-lang="en">Soon</span><span data-lang="es">Pronto</span></span>
+          <div class="body">
+            <span class="ix"><span data-lang="en">06 · UX / UI · Health</span><span data-lang="es">06 · UX / UI · Salud</span></span>
+            <h3>Pinamed</h3>
+            <p><span data-lang="en">A banking platform centered in a senior public with accessibility problems.</span><span data-lang="es">Una plataforma para encontrar y reservar turnos médicos.</span></p>
+          </div>
+          <div class="pinamed-art" style="opacity:.6;">
+            <img src="../portfolio-angelo/assets/card-pinamed.png" alt="Pinamed mockup" loading="lazy">
+          </div>
+        </a>
+      </div>
 
       </div><!-- end Henry+Pinamed row -->
 
@@ -207,7 +208,7 @@
 
           <p><span data-lang="en">Five years of work with more than 25 startups seeking their first MVP has given me a high level of expertise early in my career — which usually finds me in search of new challenges that keep pushing my limits.</span><span data-lang="es">Cinco años de trabajo con más de 25 startups buscando su primer MVP me dieron un alto nivel de expertise temprano en mi carrera.</span></p>
 
-          <p style="margin-top:18px;"><span data-lang="en">I've also been fortunate to mentor and lead incredible people, guiding them not only in their projects but in their careers. I'm convinced there's no better way to learn than by teaching.</span><span data-lang="es">También tuve la suerte de mentorear y liderar gente increíble. Estoy convencido de que no hay mejor forma de aprender que enseñando.</span></p>
+          <p class="about-p3" style="margin-top:18px;"><span data-lang="en">I've also been fortunate to mentor and lead incredible people, guiding them not only in their projects but in their careers. I'm convinced there's no better way to learn than by teaching.</span><span data-lang="es">También tuve la suerte de mentorear y liderar gente increíble. Estoy convencido de que no hay mejor forma de aprender que enseñando.</span></p>
 
           <!-- stats -->
           <div class="about-stats">

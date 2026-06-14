@@ -48,7 +48,7 @@ a{color:inherit;}
 }
 .serif{font-family:var(--display);}
 .hl{
-  background:linear-gradient(transparent 18%, var(--yellow) 18%, var(--yellow) 82%, transparent 82%);
+  background:linear-gradient(transparent 4%, var(--yellow) 4%, var(--yellow) 96%, transparent 96%);
   color:var(--accent-ink);
   padding:0 .1em;
   box-decoration-break:clone;
@@ -326,6 +326,11 @@ a{color:inherit;}
 .card--col{ flex-direction:column; }
 .card--col .body{ width:auto; padding-bottom:16px; }
 .card--col .art{ border-radius:0 0 16px 16px; min-height:240px; }
+/* Pinamed card: art outside the <a>, overlaid on desktop */
+.pinamed-wrap{ position:relative; }
+.pinamed-wrap .card{ aspect-ratio:1; }
+.pinamed-art{ flex:1; overflow:hidden; border-radius:0 0 16px 16px; min-height:0; }
+.pinamed-art img{ width:100%; height:100%; object-fit:contain; object-position:center; display:block; }
 .card .art img{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:center; display:block; }
 .card .ix{font-family:var(--mono); font-size:11px; letter-spacing:0.16em; color:var(--muted); text-transform:uppercase;}
 .card h3{font-family:var(--display); font-weight:700; font-size:clamp(24px,2.6vw,34px); line-height:1.08; letter-spacing:-0.02em;}
@@ -594,10 +599,15 @@ a{color:inherit;}
   .wrap, .nav .inner, .logos .inner, .footer .wrap{padding-left:28px; padding-right:28px;}
   .work{grid-template-columns:1fr; row-gap:20px;}
   .card.wide{grid-column:auto;}
-  .card{ flex-direction:column; min-height:auto; }
+  .card{ flex-direction:column; min-height:auto !important; }
   .card .body{ width:auto; }
-  .card .art{ border-radius:0 0 16px 16px; height:260px; overflow:hidden; width:100% !important; flex:none !important; }
-  .card .art img{ position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; object-fit:contain !important; object-position:bottom center !important; }
+  .card .art{ border-radius:0 0 16px 16px; height:auto; overflow:hidden; width:100% !important; flex:none !important; }
+  .card .art img{ position:static !important; inset:auto !important; width:100% !important; height:auto !important; object-fit:unset !important; display:block !important; }
+  .card--wejoin .art img{ object-fit:cover !important; height:320px !important; object-position:top center !important; }
+  .card--grape .art,
+  .card--zerenly .art,
+  .card--grido .art,
+  .card--henry .art{ padding:0 24px; }
   .about .grid, .cs-over .grid{grid-template-columns:1fr; gap:32px;}
   .card-row{ grid-template-columns:1fr; height:auto; }
   .card-row--h{ height:auto; }
@@ -644,8 +654,12 @@ a{color:inherit;}
   .sec-head{ margin:40px 0 28px; }
   .sec-head .t{ font-size:clamp(28px,7vw,84px); }
   .about{ margin-top:60px; }
-  .blog{ margin-top:60px; padding-bottom:48px; }
+  .blog{ margin-top:60px; padding-bottom:24px; }
   .blog .ttl{ font-size:clamp(36px,11vw,80px); margin-bottom:-24px; }
+
+  /* All outline text: 1px stroke on mobile */
+  [style*="-webkit-text-stroke"]{ -webkit-text-stroke-width:1px !important; }
+  .outline{ -webkit-text-stroke-width:1px !important; }
 
   /* Hero: smaller name, tighter subtitle, centered */
   .hero h1 .outline,
@@ -655,27 +669,43 @@ a{color:inherit;}
   .hero .cta-wrap{ display:flex; justify-content:center; }
 
   /* More breathing room between hero and projects */
-  .sec-head{ margin:64px 0 28px; }
+  .sec-head{ margin:32px 0 14px; }
 
-  /* About: smaller lead text, hide stats */
+  /* About: smaller lead text, hide stats, center all text */
   .about .lead{ font-size:20px; }
   .about-stats{ display:none; }
+  .about-grid{ text-align:center; }
 
+  /* Blog: center title, reset negative margin */
+  .blog .sec-head{ text-align:center !important; }
+  .blog .list{ margin-top:32px; }
+
+  /* Pinamed: hide on mobile */
+  .pinamed-wrap{ display:none; }
   /* About */
   .about-grid{ padding-left:20px; padding-right:20px; }
+  .about-photo{ margin-top:32px; }
+  .about-p3{ display:none; }
 
   /* Hide card corner arrows on mobile */
   .card .corner{ display:none; }
 
   /* Card body fix for narrow screens */
-  .card .body{ width:auto; flex-shrink:1; min-width:0; }
+  .card .body{ width:auto; flex-shrink:1; min-width:0; padding-bottom:16px !important; }
   .card.wide .body{ width:auto; }
   .card{ overflow:hidden; }
 
+  /* Work section: extra space after portrait */
+  #work > .sec-head{ margin-top:72px; }
+
+  /* Henry card: remove overflow margin, hug bottom */
+  .card--col .art img{ margin-bottom:0 !important; }
+  .card--col .art{ padding-bottom:16px; min-height:0; overflow:hidden !important; }
+
   /* Footer */
-  .footer{ padding:48px 0 32px; margin-top:60px; }
+  .footer{ padding:48px 0 32px; margin-top:32px; }
   .footer .ftop{ margin-bottom:40px; }
-  .footer .fbottom{ margin-top:48px; gap:20px; }
+  .footer .fbottom{ margin-top:48px; gap:32px; flex-direction:column; align-items:flex-start; }
   .footer .say{ flex-direction:column; gap:4px; font-size:14px; }
 
   /* cs-next */
@@ -701,7 +731,7 @@ a{color:inherit;}
   }
   .hero .portrait-stack .p-color img{
     width:100%; height:100%;
-    object-fit:cover; object-position:center 10%;
+    object-fit:cover; object-position:center top;
   }
   .hero .row{grid-template-columns:1fr;}
   .cs-meta{grid-template-columns:1fr 1fr;}
