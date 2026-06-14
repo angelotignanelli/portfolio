@@ -409,6 +409,7 @@ a{color:inherit;}
   color:var(--ink);
   padding:0;
   position:relative;
+  margin-top:60px;
 }
 .cs-hero .num{ display:none; }
 
