@@ -62,7 +62,7 @@ a{color:inherit;}
   backdrop-filter:none;
   -webkit-backdrop-filter:none;
   border-bottom:1px solid transparent;
-  transition:background .35s ease, border-color .35s ease, transform .35s ease;
+  transition:background .35s ease, border-color .35s ease, transform .5s ease;
 }
 .nav--hidden{ transform:translateY(-100%); }
 .nav.nav--scrolled{
