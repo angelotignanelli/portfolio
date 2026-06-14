@@ -647,10 +647,12 @@ a{color:inherit;}
   .blog{ margin-top:60px; padding-bottom:48px; }
   .blog .ttl{ font-size:clamp(36px,11vw,80px); margin-bottom:-24px; }
 
-  /* Hero: smaller name, tighter subtitle */
+  /* Hero: smaller name, tighter subtitle, centered */
   .hero h1 .outline,
   .hero h1 .filled{ font-size:clamp(40px,11vw,164px); }
   .hero .sub{ font-size:16px; margin-top:20px; }
+  .hero .left{ text-align:center; }
+  .hero .cta-wrap{ display:flex; justify-content:center; }
 
   /* More breathing room between hero and projects */
   .sec-head{ margin:64px 0 28px; }
