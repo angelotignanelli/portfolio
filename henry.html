@@ -8,42 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="cs.css">
+<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="cs.css?v=3">
 </head>
 <body style="--accent:#CBADFF; --accent-ink:#0E0E0E;" data-screen-label="Case · Henry">
-  <!-- MOBILE GATE -->
-  <div id="mobile-gate" style="display:none; position:fixed; inset:0; background:#0d0d0d; z-index:9999; flex-direction:column; align-items:center; justify-content:center; padding:40px; text-align:center;">
-    <p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666; letter-spacing:.08em; text-transform:uppercase; margin:0 0 24px;">Angelo Tignanelli</p>
-    <h2 style="font-family:'Crimson Text',serif; font-size:28px; color:#f5f5f5; font-weight:400; margin:0 0 16px; line-height:1.3;">
-      <span data-lang="en">This portfolio is designed<br>for desktop.</span>
-      <span data-lang="es">Este portfolio está diseñado<br>para desktop.</span>
-    </h2>
-    <p style="font-family:'Inter',sans-serif; font-size:14px; color:#888; margin:0 0 40px; line-height:1.6;">
-      <span data-lang="en">For the best experience, open it<br>from a computer.</span>
-      <span data-lang="es">Para la mejor experiencia, abrilo<br>desde una computadora.</span>
-    </p>
-    <button onclick="document.getElementById('mobile-gate').style.display='none'" style="font-family:'Inter',sans-serif; font-size:13px; color:#555; background:none; border:1px solid #333; border-radius:6px; padding:10px 20px; cursor:pointer; letter-spacing:.02em;">
-      <span data-lang="en">View anyway</span>
-      <span data-lang="es">Ver igual</span>
-    </button>
-  </div>
-  <script>
-    (function(){
-      function check(){
-        var gate = document.getElementById('mobile-gate');
-        if(!gate) return;
-        if(window.innerWidth < 768){
-          gate.style.display='flex';
-        } else {
-          gate.style.display='none';
-        }
-      }
-      check();
-      window.addEventListener('resize', check);
-    })();
-  </script>
-  <header class="nav"><div class="inner"><a class="brand" href="index.html"><span class="dot">AT</span><span class="who"><b>Angelo Tignanelli</b><span><span data-lang="en">Product Designer · BA</span><span data-lang="es">Diseñador de Producto · BA</span></span></span></a><div class="right"><nav class="links"><a href="index.html#work"><span data-lang="en">Work</span><span data-lang="es">Trabajo</span></a><a href="index.html#about"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a><a href="index.html#contact" class="cta"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a><div class="lang"><button data-l="es" type="button">ES</button><span class="sep">/</span><button data-l="en" type="button">EN</button></div></nav></div></header>
+
+  <header class="nav"><div class="inner"><a class="brand" href="index.html"><span class="dot">AT</span><span class="who"><b>Angelo Tignanelli</b><span><span data-lang="en">Product Designer · BA</span><span data-lang="es">Diseñador de Producto · BA</span></span></span></a><div class="right"><nav class="links"><a href="index.html#work"><span data-lang="en">Work</span><span data-lang="es">Trabajo</span></a><a href="index.html#about"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a><a href="index.html#contact" class="cta"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></nav><div class="lang"><button data-l="es" type="button">ES</button><span class="sep">/</span><button data-l="en" type="button">EN</button></div></div><button class="ham" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></header>
               <section class="cs-hero">
     <img class="cs-hero-bg" src="../portfolio-angelo/assets/hero/hero-henry-opt.jpg" alt="" aria-hidden="true">
     <div class="wrap">
@@ -57,7 +27,7 @@
       </div>
       <div class="cs-meta">
           <div class="cell"><div class="k"><span data-lang="en">Role</span><span data-lang="es">Rol</span></div><div class="v"><span data-lang="en">UX / UI Designer</span><span data-lang="es">Diseñador UX / UI</span></div></div>
-          <div class="cell"><div class="k"><span data-lang="en">Year</span><span data-lang="es">Año</span></div><div class="v">2023</div></div>
+          <div class="cell"><div class="k"><span data-lang="en">Industry</span><span data-lang="es">Industria</span></div><div class="v">Edtech</div></div>
           <div class="cell"><div class="k"><span data-lang="en">Team</span><span data-lang="es">Equipo</span></div><div class="v" style="font-size:16px;line-height:1.35;"><span data-lang="en">PO · UX · UI · Functional Analyst</span><span data-lang="es">PO · UX · UI · Analista Funcional</span></div></div>
           <div class="cell"><div class="k"><span data-lang="en">Scope</span><span data-lang="es">Alcance</span></div><div class="v" style="font-size:16px;line-height:1.35;"><span data-lang="en">Web platform · Redesign</span><span data-lang="es">Plataforma web · Rediseño</span></div></div>
       </div>
@@ -85,5 +55,6 @@
   <footer class="footer" id="contact"><div class="wrap"><div class="ftop"><span class="lbl">Buenos Aires</span><span class="ln"></span><span class="lbl" style="display:flex;align-items:center;gap:8px;"><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span></span></div><div class="big"><span data-lang="en">Wanna talk?</span><span data-lang="es">¿Hablamos?</span><br><a href="mailto:angelotignanelli@gmail.com" class="u"><span data-lang="en">contact me :)</span><span data-lang="es">escribime :)</span></a></div><div class="fbottom"><div class="socials"><a class="s" href="https://www.behance.net/angelotign133e" target="_blank" rel="noopener">Be</a><a class="s" href="https://medium.com/@angelotignanelli" target="_blank" rel="noopener">Md</a><a class="s" href="https://www.linkedin.com/in/angelotignanelli/" target="_blank" rel="noopener">In</a><a class="s" href="https://www.instagram.com/angetignanelli/" target="_blank" rel="noopener">Ig</a></div><div class="say"><span><span data-lang="en">Say hi</span><span data-lang="es">Saludá</span></span><b>angelotignanelli@gmail.com</b></div></div></div></footer>
   <script src="i18n.js"></script>
   <script src="cs-nav.js?v=2"></script>
+  <script src="nav.js"></script>
 </body>
 </html>
