@@ -12,20 +12,20 @@
 <link rel="stylesheet" href="styles.css?v=40">
 <link rel="stylesheet" href="cs.css?v=5">
   <script>
-  (function(){
+  document.addEventListener('DOMContentLoaded', function(){
     var nav = document.querySelector('.nav');
     var last = 0;
     window.addEventListener('scroll', function(){
       if(window.innerWidth <= 768) return;
       var cur = window.scrollY;
-      if(cur > last </head></head> cur > 10){
+      if(cur > last && cur > 10){
         nav.classList.add('nav--hidden');
       } else {
         nav.classList.remove('nav--hidden');
       }
       last = cur;
     }, {passive: true});
-  })();
+  });
   </script>
 </head>
 <body style="--accent:#EBD2FD; --accent-ink:#0E0E0E;" data-screen-label="Case · Zerenly">
