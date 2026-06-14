@@ -596,8 +596,8 @@ a{color:inherit;}
   .card.wide{grid-column:auto;}
   .card{ flex-direction:column; min-height:auto; }
   .card .body{ width:auto; }
-  .card .art{ border-radius:0 0 16px 16px; min-height:240px; overflow:hidden; }
-  .card .art img{ position:relative !important; inset:auto !important; width:100% !important; height:100% !important; top:auto !important; bottom:auto !important; margin:0 !important; }
+  .card .art{ border-radius:0 0 16px 16px; height:260px; overflow:hidden; width:100% !important; flex:none !important; }
+  .card .art img{ position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; object-fit:contain !important; object-position:bottom center !important; }
   .about .grid, .cs-over .grid{grid-template-columns:1fr; gap:32px;}
   .card-row{ grid-template-columns:1fr; height:auto; }
   .card-row--h{ height:auto; }
@@ -652,12 +652,15 @@ a{color:inherit;}
   .hero h1 .filled{ font-size:clamp(40px,11vw,164px); }
   .hero .sub{ font-size:16px; margin-top:20px; }
 
-  /* About: smaller lead text */
+  /* More breathing room between hero and projects */
+  .sec-head{ margin:64px 0 28px; }
+
+  /* About: smaller lead text, hide stats */
   .about .lead{ font-size:20px; }
+  .about-stats{ display:none; }
 
   /* About */
   .about-grid{ padding-left:20px; padding-right:20px; }
-  .about-stats{ grid-template-columns:1fr 1fr; }
 
   /* Card body fix for narrow screens */
   .card .body{ width:auto; flex-shrink:1; min-width:0; }
@@ -676,7 +679,25 @@ a{color:inherit;}
 }
 @media (max-width:700px){
   .hero .portrait{display:none;}
-  .hero .portrait-stack{display:none;}
+  /* Show portrait stacked below hero text on mobile */
+  .hero .portrait-stack{
+    display:block;
+    position:relative;
+    width:100%; height:320px;
+    overflow:hidden;
+    margin-top:32px;
+    border-radius:12px;
+  }
+  .hero .portrait-stack .p-bw{ display:none; }
+  .hero .portrait-stack .p-color{
+    position:absolute;
+    inset:0; top:0; left:0; right:0; bottom:0;
+    overflow:hidden;
+  }
+  .hero .portrait-stack .p-color img{
+    width:100%; height:100%;
+    object-fit:cover; object-position:center 10%;
+  }
   .hero .row{grid-template-columns:1fr;}
   .cs-meta{grid-template-columns:1fr 1fr;}
   .cs-meta .cell:nth-child(2){border-right:none;}
