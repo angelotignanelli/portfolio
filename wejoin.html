@@ -16,6 +16,22 @@
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script>
+  (function(){
+    var nav = document.querySelector('.nav');
+    var last = 0;
+    window.addEventListener('scroll', function(){
+      if(window.innerWidth <= 768) return;
+      var cur = window.scrollY;
+      if(cur > last </head></head> cur > 10){
+        nav.classList.add('nav--hidden');
+      } else {
+        nav.classList.remove('nav--hidden');
+      }
+      last = cur;
+    }, {passive: true});
+  })();
+  </script>
 </head>
 <body style="--accent:#FFD146; --accent-ink:#141414;" data-screen-label="Case · We Join">
 

@@ -11,6 +11,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=5">
 <link rel="stylesheet" href="cs.css?v=5">
+  <script>
+  (function(){
+    var nav = document.querySelector('.nav');
+    var last = 0;
+    window.addEventListener('scroll', function(){
+      if(window.innerWidth <= 768) return;
+      var cur = window.scrollY;
+      if(cur > last </head></head> cur > 10){
+        nav.classList.add('nav--hidden');
+      } else {
+        nav.classList.remove('nav--hidden');
+      }
+      last = cur;
+    }, {passive: true});
+  })();
+  </script>
 </head>
 <body style="--accent:#86CDE9; --accent-ink:#0E0E0E;" data-screen-label="Case · Grido">
 
