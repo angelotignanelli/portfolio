@@ -25,7 +25,7 @@
 }
 
 *{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth; background:#F0F0F0;}
 body{
   background:var(--bg); color:var(--ink);
   font-family:var(--body);
@@ -636,8 +636,16 @@ a{color:inherit;}
 
   /* General layout */
   .wrap, .nav .inner, .logos .inner, .footer .wrap{ padding-left:20px; padding-right:20px; }
-  .hero{ padding-top:48px; }
+  .hero{ padding-top:32px; }
   .cs-hero-bg{ height:200px; }
+
+  /* Reduce large desktop margins for mobile */
+  .logos{ margin-top:40px; margin-bottom:40px; }
+  .sec-head{ margin:40px 0 28px; }
+  .sec-head .t{ font-size:clamp(28px,7vw,84px); }
+  .about{ margin-top:60px; }
+  .blog{ margin-top:60px; padding-bottom:48px; }
+  .blog .ttl{ font-size:clamp(36px,11vw,80px); margin-bottom:-24px; }
 
   /* About */
   .about-grid{ padding-left:20px; padding-right:20px; }
