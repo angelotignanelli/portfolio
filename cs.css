@@ -96,9 +96,9 @@
 .sw .t span{ font-family:var(--mono); font-size:10px; letter-spacing:0.06em; color:var(--muted); text-transform:uppercase; }
 
 /* two-up grid */
-.fig-2{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:34px; align-items:stretch; }
-.fig-2 .fig, .fig-2 .ph{ margin-top:0; display:flex; flex-direction:column; height:100%; }
-.fig-2 .fig img{ flex:1; object-fit:cover; min-height:0; width:100%; }
+.fig-2{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:34px; align-items:start; }
+.fig-2 .fig, .fig-2 .ph{ margin-top:0; }
+.fig-2 .fig img{ width:100%; display:block; }
 
 /* image placeholder — user supplies the real image */
 .ph{
