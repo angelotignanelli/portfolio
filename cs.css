@@ -2,9 +2,21 @@
    Case-study reconstruction styles (loaded after styles.css)
    ========================================================= */
 
-/* Hero image starts at y=0, nav overlays it from the top */
-.cs-hero{ margin-top:-72px; }
-.cs-hero .wrap{ padding-top:0; }
+/* On project pages nav is always opaque — hero image sits behind it */
+.nav{
+  background:rgba(240,240,240,0.92) !important;
+  backdrop-filter:saturate(150%) blur(12px);
+  border-bottom-color:rgba(0,0,0,0.08) !important;
+}
+.nav .brand .who b,
+.nav .links a:not(.cta),
+.nav .links a.cta{ color:var(--ink) !important; }
+.nav .links a:not(.cta)::after{ background:var(--ink) !important; }
+.nav .lang button{ color:var(--muted) !important; }
+.nav .lang button.on{ color:var(--ink) !important; }
+.nav .lang button.on::after{ background:var(--ink) !important; }
+.nav .lang .sep{ color:var(--line-2) !important; }
+.nav .brand .dot{ background:var(--dark) !important; color:#fff !important; border-color:transparent !important; }
 /* ---- page layout with sidebar ---- */
 .cs-layout{
   max-width:1240px; margin:0 auto; padding:0 48px;
