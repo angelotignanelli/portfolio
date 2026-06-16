@@ -1,6 +1,10 @@
 /* =========================================================
    Case-study reconstruction styles (loaded after styles.css)
    ========================================================= */
+
+/* Hero image starts at y=0, nav overlays it from the top */
+.cs-hero{ margin-top:-72px; }
+.cs-hero .wrap{ padding-top:0; }
 /* ---- page layout with sidebar ---- */
 .cs-layout{
   max-width:1240px; margin:0 auto; padding:0 48px;
