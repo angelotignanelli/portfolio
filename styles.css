@@ -603,13 +603,13 @@ a{color:inherit;}
 @media (min-width:769px){
   .anim{
     opacity:0;
-    animation:fadeUp .6s cubic-bezier(.22,.68,0,1.1) forwards;
+    animation:fadeUp .75s cubic-bezier(.22,.68,0,1.1) forwards;
   }
-  .anim-d1{ animation-delay:.05s; }
-  .anim-d2{ animation-delay:.18s; }
-  .anim-d3{ animation-delay:.30s; }
-  .anim-d4{ animation-delay:.42s; }
-  .anim-d5{ animation-delay:.54s; }
+  .anim-d1{ animation-delay:.08s; }
+  .anim-d2{ animation-delay:.26s; }
+  .anim-d3{ animation-delay:.44s; }
+  .anim-d4{ animation-delay:.60s; }
+  .anim-d5{ animation-delay:.76s; }
 }
 
 /* responsive */
