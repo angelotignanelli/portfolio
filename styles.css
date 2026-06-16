@@ -595,6 +595,23 @@ a{color:inherit;}
 /* blog horizontal overflow guard */
 .blog{ overflow-x:hidden; }
 
+/* ---- Page load animation (desktop only) ---- */
+@keyframes fadeUp{
+  from{ opacity:0; transform:translateY(22px); }
+  to{   opacity:1; transform:translateY(0); }
+}
+@media (min-width:769px){
+  .anim{
+    opacity:0;
+    animation:fadeUp .6s cubic-bezier(.22,.68,0,1.1) forwards;
+  }
+  .anim-d1{ animation-delay:.05s; }
+  .anim-d2{ animation-delay:.18s; }
+  .anim-d3{ animation-delay:.30s; }
+  .anim-d4{ animation-delay:.42s; }
+  .anim-d5{ animation-delay:.54s; }
+}
+
 /* responsive */
 @media (max-width:980px){
   .wrap, .nav .inner, .logos .inner, .footer .wrap{padding-left:28px; padding-right:28px;}
