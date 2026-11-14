@@ -161,7 +161,7 @@ figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); fo
   .hero .deck{font-size:18px; margin-top:18px;}
   .btn{display:flex; width:100%; margin-top:24px;}
   .photo{aspect-ratio:4/3;}
-  .photo img{object-position:center 12%;}
+  .photo img{object-position:center 4%;}
   figcaption{border-top:0; padding-top:0; font-size:12px;}
 
   .clients{display:none;}
