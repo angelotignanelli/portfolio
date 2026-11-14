@@ -24,7 +24,8 @@ html[lang="en"] [data-lang="es"], html[lang="es"] [data-lang="en"]{display:none 
 /* ---------- ticker ---------- */
 .ticker{background:var(--ink); color:var(--paper); display:flex; align-items:center; overflow:hidden;}
 .ticker .live{flex:none; position:relative; z-index:1; background:var(--accent); color:var(--ink); padding:10px 16px; font-weight:500;}
-.ticker .track{display:flex; gap:64px; padding:10px 24px; white-space:nowrap; width:max-content; animation:tick 40s linear infinite;}
+.ticker .track{display:flex; padding:10px 0; white-space:nowrap; width:max-content; animation:tick 120s linear infinite; will-change:transform;}
+.ticker .track > span{flex:none; padding:0 32px;}
 @keyframes tick{to{transform:translateX(-50%)}}
 
 /* ---------- header ---------- */
@@ -143,7 +144,8 @@ figcaption{margin-top:10px; font-size:13px; color:var(--muted);}
   :root{ --gutter:20px; --sec:72px; }
   .ticker{font-size:11px;}
   .ticker .live{padding:9px 12px;}
-  .ticker .track{padding:9px 16px; gap:40px;}
+  .ticker .track{padding:9px 0;}
+  .ticker .track > span{padding:0 20px;}
 
   .mast{padding:20px 0 14px; align-items:center;}
   .brand{font-size:34px;}
