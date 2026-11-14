@@ -77,7 +77,7 @@ figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); fo
 .ph.bleed img{left:8%; top:9%; width:84%; height:91%; object-fit:contain; object-position:bottom center;}
 .ph.bleed.crop img{object-fit:cover; object-position:center top;}
 /* .lift: pantallas anchas en un cuadro 4:3 → se agrandan apenas para apoyarse en la base con poco aire arriba */
-.ph.bleed.lift img{left:-2.5%; top:10%; width:105%; height:90%; object-fit:contain; object-position:center bottom;}
+.ph.bleed.lift img{left:4%; top:0; width:92%; height:100%; object-fit:contain; object-position:center bottom;}
 /* .zoom: la imagen ya llena su marco y queda chica con aire → se agranda y se recorta en los bordes */
 .ph.bleed.zoom img{left:-4%; top:6%; width:108%; height:108%; object-fit:cover; object-position:center top;}
 /* .float: la pieza ya trae su propio margen interno, así que se agranda hasta casi tocar los bordes */
@@ -166,9 +166,7 @@ figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); fo
   .photo img{object-position:center 12%;}
   figcaption{border-top:0; padding-top:0; font-size:12px;}
 
-  .clients{flex-direction:column; align-items:flex-start; gap:18px; padding:22px 0;}
-  .logos{width:100%; display:grid; grid-template-columns:repeat(3,1fr); gap:20px 16px; justify-items:start;}
-  .logos img{height:24px;}
+  .clients{display:none;}
 
   .shead h2{font-size:36px;}
   .work{margin-top:64px;}
