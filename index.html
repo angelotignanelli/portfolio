@@ -134,6 +134,25 @@ window.va('beforeSend',function(ev){try{if(localStorage.getItem('va-disable'))re
       </a>
     </div>
   </section>
+  <script>
+  /* Unlisted case: the card only appears with the private key (?hr=<key>), which
+     is never written in this file. Without it the home stays exactly as is. */
+  (function(){
+    var k=null;
+    try{k=new URLSearchParams(location.search).get('hr');if(k)sessionStorage.setItem('hr',k);else k=sessionStorage.getItem('hr');}catch(e){}
+    if(!k||!/^[a-z0-9]{6}$/.test(k))return;
+    var side=document.querySelector('#work .row1 .side'),row2=document.querySelector('#work .row2'),zer=side&&side.querySelector('a[href="zerenly.html"]');
+    if(!side||!row2||!zer)return;
+    var a=document.createElement('a');a.className='story';a.href='heavy-rampers-'+k+'.html';
+    a.innerHTML='<div class="ph fill" style="background:#141414"><img alt="Heavy Rampers screens"></div><div class="k mono">Fintech · Lemon</div><h3><span data-lang="en">Heavy Rampers: a limit that works as a door, not a wall</span><span data-lang="es">Heavy Rampers: el límite como puerta, no como muro</span></h3>';
+    var img=a.querySelector('img'),count=document.querySelector('#work .shead .mono'),before=count.innerHTML;
+    img.onerror=function(){a.remove();side.appendChild(zer);row2.classList.remove('hr3');count.innerHTML=before;try{sessionStorage.removeItem('hr')}catch(e){}};
+    img.src='assets/hr-'+k+'/card-hr.jpg';
+    side.insertBefore(a,side.firstChild);row2.insertBefore(zer,row2.firstChild);row2.classList.add('hr3');
+    count.innerHTML='<span data-lang="en">6 stories</span><span data-lang="es">6 casos</span>';
+    var st=document.createElement('style');st.textContent='@media (min-width:761px){#work .row2.hr3{grid-template-columns:1fr 1fr 1fr;gap:32px}#work .row2.hr3 h3{font-size:26px}}';document.head.appendChild(st);
+  })();
+  </script>
 
   <section id="about" class="opinion">
     <div class="mono"><span data-lang="en">Opinion</span><span data-lang="es">Opinión</span></div>
