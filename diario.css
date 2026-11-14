@@ -51,13 +51,13 @@ html[lang="en"] [data-lang="es"], html[lang="es"] [data-lang="en"]{display:none 
 .photo{position:relative; aspect-ratio:4/5; overflow:hidden; background:#DEDAD0;}
 .photo img{width:100%; height:100%; object-fit:cover; object-position:center 0%; filter:grayscale(1) contrast(1.2);}
 .photo::after{content:""; position:absolute; inset:0; background-image:radial-gradient(rgba(247,245,240,.5) .9px, transparent 1.1px); background-size:4px 4px;}
-figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); font-size:13px; color:var(--muted);}
+figcaption{margin-top:10px; font-size:13px; color:var(--muted);}
 
 /* ---------- clients ---------- */
-.clients{display:flex; align-items:center; gap:48px; padding:28px 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink);}
-.clients .mono{flex:none; color:var(--muted);}
+.clients{display:flex; align-items:center; gap:56px; margin-top:24px; padding:28px 44px; background:#F2F0EA;}
+.clients .mono{flex:none; color:var(--muted); opacity:.75;}
 .logos{flex:1; display:flex; align-items:center; justify-content:space-between; gap:32px;}
-.logos img{height:30px; width:auto; filter:grayscale(1) contrast(1.4); mix-blend-mode:multiply; opacity:.85;}
+.logos img{height:24px; width:auto; filter:grayscale(1) contrast(1.4); mix-blend-mode:multiply; opacity:.4;}
 
 /* ---------- section head ---------- */
 .shead{display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding-bottom:12px; border-bottom:3px solid var(--ink);}
@@ -65,7 +65,7 @@ figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); fo
 .shead .mono{color:var(--muted);}
 
 /* ---------- work ---------- */
-.work{margin-top:96px;}
+.work{margin-top:112px;}
 .story{display:block; text-decoration:none; color:var(--ink);}
 /* Portadas: cuadro de proporción fija con el color del caso.
    .bleed  pantallas cortadas abajo  → apoyadas en la base, con aire arriba y a los lados
