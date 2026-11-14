@@ -78,7 +78,8 @@ figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); fo
 .ph.bleed.crop img{object-fit:cover; object-position:center top;}
 /* .zoom: la imagen ya llena su marco y queda chica con aire → se agranda y se recorta en los bordes */
 .ph.bleed.zoom img{left:-4%; top:6%; width:108%; height:108%; object-fit:cover; object-position:center top;}
-.ph.float img{left:7%; top:8%; width:86%; height:84%; object-fit:contain; object-position:center; transform-origin:center;}
+/* .float: la pieza ya trae su propio margen interno, así que se agranda hasta casi tocar los bordes */
+.ph.float img{left:-2%; top:0; width:104%; height:100%; object-fit:contain; object-position:center; transform-origin:center;}
 .ph.fill img{object-fit:cover; object-position:center; transform-origin:center;}
 .story:hover h3{text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:5px;}
 .story .k{margin-top:14px; font-size:11px;}
@@ -122,7 +123,7 @@ figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); fo
 .post.soon{color:#8A877F; pointer-events:none;}
 
 /* ---------- contact ---------- */
-.contact{padding:48px 0 88px; text-align:center;}
+.contact{padding:120px 0 88px; text-align:center;}
 .contact .big{margin:0; font-family:var(--serif); font-weight:400; font-size:clamp(52px,10vw,140px); line-height:.9; letter-spacing:-.045em;}
 .contact .big a{font-style:italic; font-weight:600; text-decoration:underline; text-decoration-thickness:3px; text-underline-offset:12px;}
 .contact .links{margin:32px 0 0; font-size:15px; line-height:1.6;}
@@ -171,8 +172,7 @@ figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); fo
   .work{margin-top:64px;}
   .row1, .row2{grid-template-columns:1fr; gap:36px; padding:28px 0;}
   .row1 .lead .ph, .row2 .ph{aspect-ratio:4/3;}
-  .row2 .ph.float{aspect-ratio:16/10.5;}
-  .ph.float img{left:5%; top:6%; width:90%; height:88%;}
+  .row2 .ph.float{aspect-ratio:16/10;}
   .row1 .lead h3{font-size:30px; line-height:1.06;}
   .row1 .lead p{font-size:17px;}
   .side{padding-left:0; border-left:0; gap:36px; padding-top:28px; border-top:1px solid var(--rule);}
@@ -200,7 +200,7 @@ figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); fo
   .post .lead{display:none;}
   .post .r{margin-left:auto; font-size:11px;}
 
-  .contact{padding:24px 0 64px;}
+  .contact{padding:72px 0 64px;}
   .contact .big{font-size:52px; line-height:.95;}
   .contact .big a{text-underline-offset:8px; text-decoration-thickness:2px;}
   .contact .links{font-size:14px; margin-top:24px;}
