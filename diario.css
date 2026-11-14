@@ -35,7 +35,7 @@ html[lang="en"] [data-lang="es"], html[lang="es"] [data-lang="en"]{display:none 
 .lang button{border:0; background:none; padding:0; font:inherit; letter-spacing:inherit; text-transform:inherit; color:var(--muted); cursor:pointer;}
 .lang button.on{color:var(--ink); font-weight:500; text-decoration:underline; text-underline-offset:3px;}
 .lang button:focus-visible, .nav a:focus-visible, .btn:focus-visible{outline:2px solid var(--ink); outline-offset:3px;}
-.nav{display:flex; align-items:center; gap:4px; padding:8px 0; border-bottom:3px solid var(--ink); font-size:14px; font-weight:600;}
+.nav{display:flex; align-items:center; gap:4px; padding:8px 0; border-bottom:1px solid var(--ink); font-size:14px; font-weight:600;}
 .nav a{padding:6px 12px; text-decoration:none;}
 .nav a:not(.cta):hover{background:var(--ink); color:var(--paper);}
 .nav .sp{margin-left:auto;}
