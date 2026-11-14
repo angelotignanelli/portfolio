@@ -14,7 +14,12 @@
 <link rel="stylesheet" href="diario.css?v=14">
 <link rel="stylesheet" href="caso.css?v=3">
 <link rel="stylesheet" href="motion.css?v=2">
-<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script>
+/* Analytics: abrí el sitio con ?notrack para no contar las visitas de este navegador (?track lo vuelve a activar). */
+try{var q=location.search;if(/[?&]notrack(&|=|$)/.test(q))localStorage.setItem('va-disable','1');if(/[?&]track(&|=|$)/.test(q))localStorage.removeItem('va-disable');}catch(e){}
+window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};
+window.va('beforeSend',function(ev){try{if(localStorage.getItem('va-disable'))return null}catch(e){}return ev});
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body style="--case:#CBADFF;" data-screen-label="Case · Henry">
