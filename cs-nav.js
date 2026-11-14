@@ -60,12 +60,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* active highlight via IntersectionObserver */
   var active = null;
+  /* barra que se desliza hasta la sección activa (estilos en motion.css) */
+  var ind = document.createElement('span');
+  ind.className = 'cs-ind';
+  ind.setAttribute('aria-hidden', 'true');
+  nav.appendChild(ind);
+  nav.classList.add('has-ind');
+  function moveInd() {
+    if (!active) return;
+    ind.style.height = active.offsetHeight + 'px';
+    ind.style.transform = 'translateY(' + active.offsetTop + 'px)';
+  }
   function setActive(a) {
     if (active === a) return;
     if (active) active.classList.remove('active');
     active = a;
     if (active) active.classList.add('active');
+    moveInd();
   }
+  window.addEventListener('resize', moveInd);
+  new MutationObserver(moveInd).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
   if (!links.length) return;
   setActive(links[0].a);

@@ -9,7 +9,16 @@
   }
   document.addEventListener('click', function (e) {
     var b = e.target.closest && e.target.closest('.lang button');
-    if (b) { e.preventDefault(); apply(b.dataset.l); }
+    if (!b) return;
+    e.preventDefault();
+    var l = b.dataset.l;
+    if (l === document.documentElement.lang) return;
+    // Fundido corto entre idiomas donde el navegador lo soporta.
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (document.startViewTransition && !calm && document.visibilityState === 'visible') {
+      var t = document.startViewTransition(function () { apply(l); });
+      t.ready.catch(function () {}); t.finished.catch(function () {});
+    } else apply(l);
   });
   apply(document.documentElement.lang || 'en');
 

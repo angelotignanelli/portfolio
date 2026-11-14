@@ -1,0 +1,122 @@
+/* =========================================================
+   Movimiento · "como un diario": tinta que aparece, resaltador que se pasa,
+   filetes que se dibujan. Rápido, sin rebotes.
+   - Los estados iniciales ocultos solo aplican con html.motion, que pone el
+     script del <head> si el sistema no pide reducir movimiento.
+   - Los hovers solo animan si no se pidió reducir movimiento.
+   ========================================================= */
+:root{
+  --ease-out:cubic-bezier(.2,.7,.2,1);
+  --ease-ink:cubic-bezier(.7,0,.2,1);
+}
+
+/* ---------- 1 · Entrada del hero ---------- */
+/* Hasta que motion.js parte el titular en palabras, no se muestra (evita un parpadeo). */
+html.motion .hero h1{visibility:hidden;}
+html.motion .hero h1.split{visibility:visible;}
+/* Cada palabra sube desde una máscara; --d es el retraso de su línea. */
+.hero h1 .w{display:inline-block; overflow:hidden; vertical-align:top; padding:0 .06em .14em 0; margin:0 -.06em -.14em 0;}
+.hero h1 .w > span{display:inline-block;}
+html.motion .hero h1 .w > span{transform:translateY(105%); transition:transform .8s var(--ease-out); transition-delay:var(--d,0ms);}
+html.motion .hero h1.in .w > span{transform:none;}
+
+html.motion .hero article > .mono,
+html.motion .hero .deck,
+html.motion .hero .btn{opacity:0; transform:translateY(12px); transition:opacity .7s var(--ease-out), transform .7s var(--ease-out);}
+html.motion .hero.in article > .mono{opacity:1; transform:none;}
+html.motion .hero.in .deck{opacity:1; transform:none; transition-delay:var(--after,500ms);}
+html.motion .hero.in .btn{opacity:1; transform:none; transition-delay:calc(var(--after,500ms) + 120ms);}
+
+/* La foto se revela de arriba hacia abajo, como si se imprimiera. */
+html.motion .hero .photo{clip-path:inset(0 0 100% 0); transition:clip-path 1.1s var(--ease-ink) .15s;}
+html.motion .hero.in .photo{clip-path:inset(0 0 0 0);}
+html.motion .hero figcaption{opacity:0; transition:opacity .6s ease 1.1s;}
+html.motion .hero.in figcaption{opacity:1;}
+
+/* Resaltador: el amarillo se pasa de izquierda a derecha. */
+html.motion .hl{background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 0 / 0% 100%; transition:background-size .75s var(--ease-ink); transition-delay:var(--hd,0ms);}
+html.motion .hl.in{background-size:100% 100%;}
+
+/* ---------- 2 · Al hacer scroll ---------- */
+/* Filetes de sección que se dibujan de izquierda a derecha. */
+html.motion .shead{position:relative; border-bottom-color:transparent;}
+html.motion .shead::after{content:""; position:absolute; left:0; right:0; bottom:-3px; height:3px; background:var(--ink); transform:scaleX(0); transform-origin:left center; transition:transform 1s var(--ease-ink);}
+html.motion .shead.in::after{transform:scaleX(1);}
+html.motion .opinion{position:relative; border-top-color:transparent;}
+html.motion .opinion::before{content:""; position:absolute; left:0; right:0; top:-3px; height:3px; background:var(--ink); transform:scaleX(0); transform-origin:left center; transition:transform 1s var(--ease-ink);}
+html.motion .opinion.in::before{transform:scaleX(1);}
+
+/* Portadas: aparecen con un fundido y suben 16px, en cascada. */
+html.motion .story{opacity:0; transform:translateY(16px); transition:opacity .7s var(--ease-out), transform .7s var(--ease-out); transition-delay:var(--sd,0ms);}
+html.motion .story.in{opacity:1; transform:none;}
+
+/* Banda de logos: aparición muy suave. */
+html.motion .clients{opacity:0; transition:opacity 1.4s ease;}
+html.motion .clients.in{opacity:1;}
+
+/* Cifras: números de ancho fijo para que no salten mientras cuentan. */
+.stats b{font-variant-numeric:tabular-nums;}
+
+/* Si motion.js no llegó a cargar, se muestra todo igual. */
+html.motion.reveal-all .hero h1{visibility:visible;}
+html.motion.reveal-all .hero h1 .w > span,
+html.motion.reveal-all .hero article > .mono, html.motion.reveal-all .hero .deck, html.motion.reveal-all .hero .btn,
+html.motion.reveal-all .story{opacity:1; transform:none;}
+html.motion.reveal-all .hero .photo{clip-path:none;}
+html.motion.reveal-all .hero figcaption, html.motion.reveal-all .clients{opacity:1;}
+html.motion.reveal-all .hl{background-size:100% 100%;}
+html.motion.reveal-all .shead::after, html.motion.reveal-all .opinion::before{transform:none;}
+
+/* ---------- 3 · Hovers ---------- */
+@media (prefers-reduced-motion:no-preference){
+  /* Menú: el bloque negro entra desde abajo. */
+  .nav a:not(.cta){background:linear-gradient(var(--ink),var(--ink)) no-repeat 0 100% / 100% 0%; transition:background-size .25s var(--ease-out), color .2s;}
+  .nav a:not(.cta):hover{background:linear-gradient(var(--ink),var(--ink)) no-repeat 0 100% / 100% 100%; color:var(--paper);}
+
+  /* Botones con flecha: la flecha se desliza. */
+  .btn svg, .col .follow svg{transition:transform .3s var(--ease-out);}
+  .btn:hover svg, .col .follow:hover svg{transform:translateX(4px);}
+
+  /* Proyectos: el fondo se satura apenas y el título se subraya dibujándose. */
+  .story .ph{transition:filter .5s var(--ease-out);}
+  .story:hover .ph{filter:saturate(1.2);}
+  .story:hover h3{text-decoration:none;}
+  .story h3 > span{background:linear-gradient(currentColor,currentColor) no-repeat 0 100% / 0% 2px; box-decoration-break:clone; -webkit-box-decoration-break:clone; transition:background-size .45s var(--ease-ink);}
+  .story:hover h3 > span{background-size:100% 2px;}
+
+  /* Blog: el amarillo se pasa de izquierda a derecha, entra una flecha y el número pasa a negro. */
+  .post .t{background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 0 / 0% 100%; transition:background-size .35s var(--ease-ink);}
+  .post:hover .t{background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 0 / calc(100% - 1.05em) 100%;}
+  .post .t::after{content:"↗"; display:inline-block; width:1em; margin-left:.05em; font-family:var(--sans); font-weight:500; font-size:.7em; opacity:0; transform:translate(-6px,6px); transition:opacity .25s, transform .35s var(--ease-out);}
+  .post:hover .t::after{opacity:1; transform:none;}
+  .post .n{transition:color .2s;}
+  .post:hover .n{color:var(--ink);}
+  .post.soon .t::after{content:none;}
+}
+/* Sin movimiento: el blog conserva el resaltado instantáneo de siempre. */
+@media (prefers-reduced-motion:reduce){
+  .post:hover .t{background:var(--accent);}
+}
+
+/* ---------- 4 · Transiciones entre páginas ---------- */
+@media (prefers-reduced-motion:no-preference){
+  /* Navegación entre páginas del sitio con View Transitions (Chrome, Edge, Safari). */
+  @view-transition{navigation:auto;}
+  ::view-transition-group(*){animation-duration:.5s; animation-timing-function:var(--ease-ink);}
+  ::view-transition-old(root), ::view-transition-new(root){animation-duration:.3s;}
+  /* La portada de la home se convierte en la imagen principal del caso. */
+  .story[href="wejoin.html"] .ph, .cs-hero-bg[src*="hero-wejoin"]{view-transition-name:case-wejoin;}
+  .story[href="zerenly.html"] .ph, .cs-hero-bg[src*="hero-zerenly"]{view-transition-name:case-zerenly;}
+  .story[href="grape.html"] .ph, .cs-hero-bg[src*="hero-grape"]{view-transition-name:case-grape;}
+  .story[href="grido.html"] .ph, .cs-hero-bg[src*="hero-grido"]{view-transition-name:case-grido;}
+  .story[href="henry.html"] .ph, .cs-hero-bg[src*="hero-henry"]{view-transition-name:case-henry;}
+  ::view-transition-old(*), ::view-transition-new(*){object-fit:cover;}
+}
+
+/* Índice lateral de los casos: una barra que se desliza hasta la sección activa. */
+.cs-sidenav nav{position:sticky;}
+.cs-sidenav .cs-ind{position:absolute; left:0; top:0; width:3px; height:0; background:var(--case); pointer-events:none;}
+.cs-sidenav nav.has-ind a.active{border-left-color:transparent;}
+@media (prefers-reduced-motion:no-preference){
+  .cs-sidenav .cs-ind{transition:transform .45s var(--ease-ink), height .45s var(--ease-ink);}
+}
