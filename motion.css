@@ -84,14 +84,11 @@ html.motion.reveal-all .shead::after, html.motion.reveal-all .opinion::before{tr
   .story h3 > span{background:linear-gradient(currentColor,currentColor) no-repeat 0 100% / 0% 2px; box-decoration-break:clone; -webkit-box-decoration-break:clone; transition:background-size .45s var(--ease-ink);}
   .story:hover h3 > span{background-size:100% 2px;}
 
-  /* Blog: el amarillo se pasa de izquierda a derecha, entra una flecha y el número pasa a negro. */
+  /* Blog: el amarillo se pasa de izquierda a derecha y el número pasa a negro. */
   .post .t{background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 0 / 0% 100%; transition:background-size .35s var(--ease-ink);}
-  .post:hover .t{background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 0 / calc(100% - 1.05em) 100%;}
-  .post .t::after{content:"↗"; display:inline-block; width:1em; margin-left:.05em; font-family:var(--sans); font-weight:500; font-size:.7em; opacity:0; transform:translate(-6px,6px); transition:opacity .25s, transform .35s var(--ease-out);}
-  .post:hover .t::after{opacity:1; transform:none;}
+  .post:hover .t{background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 0 / 100% 100%;}
   .post .n{transition:color .2s;}
   .post:hover .n{color:var(--ink);}
-  .post.soon .t::after{content:none;}
 }
 /* Sin movimiento: el blog conserva el resaltado instantáneo de siempre. */
 @media (prefers-reduced-motion:reduce){
