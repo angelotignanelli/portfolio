@@ -2,7 +2,9 @@
 
 Fuente de verdad para cualquier cambio, caso nuevo o rediseño. Si el sitio cambia, se actualiza este archivo.
 
-> **Estado (noviembre de 2026):** la home (`index.html` + `diario.css`) se rediseñó con el lenguaje "diario digital" de la sección 0. Los casos de estudio (`*.html` + `styles.css` + `cs.css`) siguen con el diseño anterior, descrito desde la sección 1. Pendiente: llevar los casos al lenguaje nuevo.
+> **Estado (noviembre de 2026):** todo el sitio usa el lenguaje "diario digital" de la sección 0: la home (`index.html` + `diario.css`) y los 5 casos (`*.html` + `diario.css` + `caso.css`). Las secciones 1 a 7 describen el diseño **anterior** (`styles.css`, `cs.css`) y quedan como referencia histórica; `wejoin-export.html` y `home-opciones.html` siguen con ese diseño y no están enlazadas.
+>
+> **Formato de caso:** está definido en la skill del agente portfolio (`references/caso-de-estudio.md` + `references/plantilla-caso.html`). Resumen: hero (kicker, titular igual al de la home, bajada, ficha Rol · Año/Duración · Equipo · Alcance, **En corto**: Problema · Mi rol · Resultado, imagen 1920×788) → desafío + contexto/enfoque → secciones 01 Discovery · 02 Framing · 03 **Decisiones clave** · 04 Diseño · 05 Reflexión (con índice lateral automático de `cs-nav.js`) → resultado en números (bloque negro, números en el color del caso) → próximo caso → contacto. Cada caso define su color con `<body style="--case:#HEX">`. Orden de los casos = orden de la home; "Case NN / TOTAL" y "Next project" siguen ese orden.
 
 ## 0. Home · Diario digital (nov 2026)
 
@@ -98,6 +100,8 @@ Todos los casos siguen la misma secuencia (ver `zerenly.html`, que es el más li
 Regla: los acentos son **pasteles claros con `--accent-ink` casi negro**. El caso nuevo tiene que tomar un tono distinto de los existentes y derivarlo de la marca del proyecto.
 
 ## 6. Cómo agregar un caso nuevo (checklist)
+
+> **Reemplazado (nov 2026):** para casos nuevos usar la plantilla y el checklist de la skill (`plantilla-caso.html` + `caso-de-estudio.md`). Lo de abajo describe el método anterior.
 
 1. Copiar `zerenly.html` → `<slug>.html` y cambiar `--accent`, `data-screen-label`, el hero, el meta, el overview, las secciones, el outcome y `cs-next`.
 2. Crear los assets: `assets/hero/hero-<slug>-opt.jpg`, `assets/card-<slug>.webp` y `assets/<slug>/{en,es}/` para las imágenes con texto. Usar webp siempre que se pueda.

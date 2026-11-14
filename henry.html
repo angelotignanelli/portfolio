@@ -8,36 +8,43 @@
 <title>Henry — Angelo Tignanelli</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=42">
-<link rel="stylesheet" href="cs.css?v=8">
-  <script>
-  document.addEventListener('DOMContentLoaded', function(){
-    var nav = document.querySelector('.nav');
-    var last = 0;
-    window.addEventListener('scroll', function(){
-      if(window.innerWidth <= 768) return;
-      var cur = window.scrollY;
-      if(cur > last && cur > 10){
-        nav.classList.add('nav--hidden');
-      } else {
-        nav.classList.remove('nav--hidden');
-      }
-      last = cur;
-    }, {passive: true});
-  });
-  </script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="diario.css?v=2">
+<link rel="stylesheet" href="caso.css?v=3">
 </head>
-<body style="--accent:#CBADFF; --accent-ink:#0E0E0E;" data-screen-label="Case · Henry">
+<body style="--case:#CBADFF;" data-screen-label="Case · Henry">
 
-  <header class="nav"><div class="inner"><a class="brand" href="index.html"><span class="dot"><svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="9" y="8" width="11" height="10" fill="currentColor" opacity="0.22"/><text x="0" y="17" font-family="'Crimson Text', Georgia, serif" font-weight="700" font-size="18" letter-spacing="-0.05em" fill="currentColor">AT</text></svg></span><span class="who"><b>Angelo Tignanelli</b><span><span data-lang="en">Product Designer · BA</span><span data-lang="es">Diseñador de Producto · BA</span></span></span></a><div class="right"><nav class="links"><a href="index.html#work"><span data-lang="en">Work</span><span data-lang="es">Trabajo</span></a><a href="index.html#about"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a><a href="index.html#contact" class="cta"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></nav><div class="lang"><button data-l="es" type="button">ES</button><span class="sep">/</span><button data-l="en" type="button">EN</button></div></div><button class="ham" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></header>
+  <div class="ticker mono" aria-label="Status">
+  <span class="live">● Live</span>
+  <div class="track" aria-hidden="true">
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+  </div>
+</div>
+<header class="wrap">
+  <div class="mast">
+    <a class="brand" href="index.html">Angelo<span>.</span></a>
+    <div class="date mono"><span class="today"><span id="today-en" data-lang="en"></span><span id="today-es" data-lang="es"></span><br></span><span class="city">Buenos Aires · </span><span class="lang"><button data-l="en" type="button">EN</button> / <button data-l="es" type="button">ES</button></span></div>
+  </div>
+  <nav class="nav">
+    <a href="index.html#work"><span data-lang="en">Work</span><span data-lang="es">Trabajo</span></a>
+    <a href="index.html#about"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a>
+    <a href="index.html#writing"><span data-lang="en">Writing</span><span data-lang="es">Escritos</span></a>
+    <span class="sp"></span>
+    <a class="cta" href="#contact"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+  </nav>
+  <div class="crumbs mono"><a href="index.html#work">← <span data-lang="en">All work</span><span data-lang="es">Todos los proyectos</span></a><span><span data-lang="en">Case</span><span data-lang="es">Caso</span> 05 / 05</span></div>
+</header>
+
               <section class="cs-hero">
     <img class="cs-hero-bg" src="assets/hero/hero-henry-opt.jpg" alt="" aria-hidden="true">
     <div class="wrap">
       <div class="cs-hero-inner">
-        <div class="cs-hero-num">03</div>
+        <div class="cs-hero-num">05</div>
         <div class="cs-hero-content">
-          <div class="ix"><span class="ln"></span><span data-lang="en">03 · UX / UI · Edtech</span><span data-lang="es">03 · UX / UI · Edtech</span></div>
+          <div class="ix"><span class="ln"></span><span data-lang="en">05 · UX / UI · Edtech</span><span data-lang="es">05 · UX / UI · Edtech</span></div>
           <h1><span>Henry,</span> <span style="opacity:.5;"><span data-lang="en">web development academy</span><span data-lang="es">academia de desarrollo web</span></span></h1>
           <p class="tagline"><span data-lang="en">Unifying the verticals of a LATAM education platform — study now, pay once you land a job.</span><span data-lang="es">Unificar las verticales de una plataforma educativa latam — estudiás ahora, pagás cuando conseguís trabajo.</span></p>
         </div>
@@ -64,14 +71,27 @@
 <img src="assets/henry/en/Group 514586599.webp" data-lang="en" alt="Now / Next / Later roadmap with key results per horizon" loading="lazy"><figcaption>Now / Next / Later roadmap with key results per horizon</figcaption></figure></div></div></section>
   <section class="cs-section" id="designdiseo"><div class="wrap"><div class="cs-head"><div class="ey"><span class="n">03</span><span data-lang="en">Stellar UI</span><span data-lang="es">Stellar UI</span></div><h2><span data-lang="en">Design</span><span data-lang="es">Diseño</span></h2><p class="sub"><span data-lang="en">A design system built from a moodboard — warm, close and human.</span><span data-lang="es">Un design system construido desde un moodboard — cálido, cercano y humano.</span></p></div><div class="cs-body"><p><span data-lang="en">The UI stage ran about two months and produced <strong>Stellar UI</strong>, the design system behind the platform. Starting from a moodboard, we explored visual directions — light, close, warm and trustworthy — until landing on an identity that felt like a friend or a course-mate rather than an institution.</span><span data-lang="es">La etapa de UI duró unos dos meses y produjo <strong>Stellar UI</strong>, el design system detrás de la plataforma. Partiendo de un moodboard, exploramos direcciones visuales —livianas, cercanas, cálidas y confiables— hasta encontrar una identidad que se sintiera como un amigo o un compañero de cursada, no como una institución.</span></p><p><span data-lang="en">The result: 3D illustrations, minimalist iconography, curved corners and an effusive palette. Heavy componentisation kept a large feature set within MVP scope — including a full dark mode from day one.</span><span data-lang="es">El resultado: ilustraciones 3D, iconografía minimalista, esquinas redondeadas y una paleta efusiva. Una fuerte componentización mantuvo un set grande de funcionalidades dentro del alcance del MVP — incluyendo un dark mode completo desde el día uno.</span></p><p><span data-lang="en">The key product surfaces in the "Now" horizon: a unified Home consolidating modules, classes and progress across verticals; a lecture view built for deep focus; authentication designed to feel like a welcome, not a gate; and a library that surfaces the right resource at the right moment in a student's journey.</span><span data-lang="es">Las superficies clave de producto en el horizonte "Now": un Home unificado que consolida módulos, clases y progreso a través de las verticales; una vista de clase construida para el enfoque profundo; una autenticación pensada para sentirse como una bienvenida, no como un portón; y una biblioteca que muestra el recurso correcto en el momento correcto del recorrido del estudiante.</span></p><figure class="fig"><img src="assets/henry/es/Group 514586612.png" data-lang="es" alt="Stellar UI — full case study screens, dark mode, dashboard, lectures" loading="lazy">
 <img src="assets/henry/en/📗 Caso de Estudio _ Web (2).png" data-lang="en" alt="Stellar UI — full case study screens, dark mode, dashboard, lectures" loading="lazy"><figcaption>Stellar UI — full case study screens, dark mode, dashboard, lectures</figcaption></figure></div></div></section>
-  <section class="cs-section" id="outcomelearningsre"><div class="wrap"><div class="cs-head"><div class="ey"><span class="n">04</span><span data-lang="en">Reflection</span><span data-lang="es">Reflexión</span></div><h2><span data-lang="en">Outcome & learnings</span><span data-lang="es">Resultado y aprendizajes</span></h2><p class="sub"><span data-lang="en">Where it goes — and what it taught.</span><span data-lang="es">Hacia dónde va — y qué me dejó.</span></p></div><div class="cs-body"><p><span data-lang=”en”><strong>What shipped.</strong> The “Now” horizon was delivered production-ready to Henry’s engineering team. As a client engagement, post-launch usage data sits with them — but the problem Stellar UI solved was measurable at delivery: five disconnected experiences replaced by one, with a roadmap the team could act on from day one without needing us in the room.</span><span data-lang=”es”><strong>Qué se entregó.</strong> El horizonte “Now” fue entregado listo para producción al equipo de ingeniería de Henry. Como proyecto de cliente, los datos de uso post-lanzamiento son de ellos — pero el problema que Stellar UI resolvió era medible en la entrega: cinco experiencias desconectadas reemplazadas por una sola, con un roadmap que el equipo podía ejecutar desde el día uno sin necesitarnos en la sala.</span></p><p><span data-lang=”en”><strong>Next steps.</strong> Ship the “Next” horizon — public profiles, the Job Board and discussion forums — then scale into the admin and operations tooling.</span><span data-lang=”es”><strong>Próximos pasos.</strong> Lanzar el horizonte “Next” —perfiles públicos, el Job Board y los foros de discusión— y después escalar hacia las herramientas de administración y operaciones.</span></p><p><span data-lang=”en”><strong>Learnings.</strong> When a business grows by stacking verticals, design’s job is to make them feel like one product. A shared system (Stellar UI) and a single, human narrative did more for coherence than any individual screen ever could. The other thing this project confirmed: a roadmap is only as good as the research behind it. The Now / Next / Later structure worked because it was anchored in real student interviews — not internal assumptions about what users needed.</span><span data-lang=”es”><strong>Aprendizajes.</strong> Cuando un negocio crece apilando verticales, el trabajo del diseño es hacer que se sientan como un solo producto. Un sistema compartido (Stellar UI) y una narrativa única y humana hicieron más por la coherencia que cualquier pantalla individual. Lo otro que este proyecto confirmó: un roadmap vale lo que vale la investigación que lo sostiene. La estructura Now / Next / Later funcionó porque estaba anclada en entrevistas reales con estudiantes — no en suposiciones internas sobre qué necesitaban los usuarios.</span></p></div></div></section>
+  <section class="cs-section" id="outcomelearningsre"><div class="wrap"><div class="cs-head"><div class="ey"><span class="n">04</span><span data-lang="en">Reflection</span><span data-lang="es">Reflexión</span></div><h2><span data-lang="en">Outcome & learnings</span><span data-lang="es">Resultado y aprendizajes</span></h2><p class="sub"><span data-lang="en">Where it goes — and what it taught.</span><span data-lang="es">Hacia dónde va — y qué me dejó.</span></p></div><div class="cs-body"><p><span data-lang="en"><strong>What shipped.</strong> The “Now” horizon was delivered production-ready to Henry’s engineering team. As a client engagement, post-launch usage data sits with them — but the problem Stellar UI solved was measurable at delivery: five disconnected experiences replaced by one, with a roadmap the team could act on from day one without needing us in the room.</span><span data-lang="es"><strong>Qué se entregó.</strong> El horizonte “Now” fue entregado listo para producción al equipo de ingeniería de Henry. Como proyecto de cliente, los datos de uso post-lanzamiento son de ellos — pero el problema que Stellar UI resolvió era medible en la entrega: cinco experiencias desconectadas reemplazadas por una sola, con un roadmap que el equipo podía ejecutar desde el día uno sin necesitarnos en la sala.</span></p><p><span data-lang="en"><strong>Next steps.</strong> Ship the “Next” horizon — public profiles, the Job Board and discussion forums — then scale into the admin and operations tooling.</span><span data-lang="es"><strong>Próximos pasos.</strong> Lanzar el horizonte “Next” —perfiles públicos, el Job Board y los foros de discusión— y después escalar hacia las herramientas de administración y operaciones.</span></p><p><span data-lang="en"><strong>Learnings.</strong> When a business grows by stacking verticals, design’s job is to make them feel like one product. A shared system (Stellar UI) and a single, human narrative did more for coherence than any individual screen ever could. The other thing this project confirmed: a roadmap is only as good as the research behind it. The Now / Next / Later structure worked because it was anchored in real student interviews — not internal assumptions about what users needed.</span><span data-lang="es"><strong>Aprendizajes.</strong> Cuando un negocio crece apilando verticales, el trabajo del diseño es hacer que se sientan como un solo producto. Un sistema compartido (Stellar UI) y una narrativa única y humana hicieron más por la coherencia que cualquier pantalla individual. Lo otro que este proyecto confirmó: un roadmap vale lo que vale la investigación que lo sostiene. La estructura Now / Next / Later funcionó porque estaba anclada en entrevistas reales con estudiantes — no en suposiciones internas sobre qué necesitaban los usuarios.</span></p></div></div></section>
     </div>
   </div>
   <section class="cs-outcome"><div class="wrap"><div class="label"><span data-lang="en">Outcome</span><span data-lang="es">Resultado</span></div><h2><span data-lang="en">One identity and one experience across every vertical.</span><span data-lang="es">Una identidad y una experiencia en todas las verticales.</span></h2><div class="cols"><div class="col"><div class="n">Stellar UI</div><div class="l"><span data-lang="en">a scalable design system, with full dark mode, built from scratch.</span><span data-lang="es">un design system escalable, con dark mode completo, hecho de cero.</span></div></div><div class="col"><div class="n">IA</div><div class="l"><span data-lang="en">the visual identity defined through an AI-led art search.</span><span data-lang="es">la identidad visual definida con una búsqueda de arte guiada por IA.</span></div></div><div class="col"><div class="n">Roadmap</div><div class="l"><span data-lang="en">a Now / Next / Later plan the client could execute against.</span><span data-lang="es">un plan Now / Next / Later que el cliente podía ejecutar.</span></div></div></div></div></section>
-  <nav class="cs-next"><a href="grido.html"><div class="wrap"><div class="k"><span data-lang="en">Next project</span><span data-lang="es">Próximo proyecto</span></div><div class="row"><div class="nm">Grido</div><div class="arw">→</div></div></div></a></nav>
-  <footer class="footer" id="contact"><div class="wrap"><div class="ftop"><span class="lbl">Buenos Aires</span><span class="ln"></span><span class="lbl" style="display:flex;align-items:center;gap:8px;"><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span></span></div><div class="big"><span data-lang="en">Wanna talk?</span><span data-lang="es">¿Hablamos?</span><br><a href="mailto:angelotignanelli@gmail.com" class="u"><span data-lang="en">contact me :)</span><span data-lang="es">escribime :)</span></a></div><div class="fbottom"><div class="socials"><a class="s" href="https://www.behance.net/angelotign133e" target="_blank" rel="noopener">Be</a><a class="s" href="https://medium.com/@angelotignanelli" target="_blank" rel="noopener">Md</a><a class="s" href="https://www.linkedin.com/in/angelotignanelli/" target="_blank" rel="noopener">In</a><a class="s" href="https://www.instagram.com/angetignanelli/" target="_blank" rel="noopener">Ig</a></div><div class="say"><span><span data-lang="en">Say hi</span><span data-lang="es">Saludá</span></span><b>angelotignanelli@gmail.com</b></div></div></div></footer>
+  <nav class="cs-next"><a href="wejoin.html"><div class="wrap"><div class="k"><span data-lang="en">Next project</span><span data-lang="es">Próximo proyecto</span></div><div class="row"><div class="nm">We Join</div><div class="arw">→</div></div></div></a></nav>
+  <section id="contact" class="contact">
+  <div class="wrap">
+    <p class="big"><span data-lang="en">Wanna talk?</span><span data-lang="es">¿Hablamos?</span><br><a href="mailto:angelotignanelli@gmail.com"><span data-lang="en">contact me :)</span><span data-lang="es">escribime :)</span></a></p>
+    <p class="links"><a href="mailto:angelotignanelli@gmail.com"><b>angelotignanelli@gmail.com</b></a><span class="sep"> · </span> <a href="https://www.linkedin.com/in/angelotignanelli/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.behance.net/angelotign133e" target="_blank" rel="noopener">Behance</a> · <a href="https://medium.com/@angelotignanelli" target="_blank" rel="noopener">Medium</a> · <a href="https://www.instagram.com/angetignanelli/" target="_blank" rel="noopener">Instagram</a></p>
+  </div>
+</section>
+<script>
+  (function () {
+    var d = new Date(), en = document.getElementById('today-en'), es = document.getElementById('today-es');
+    try {
+      if (en) en.textContent = d.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+      if (es) es.textContent = d.toLocaleDateString('es-AR', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+    } catch (e) {}
+  })();
+</script>
   <script src="i18n.js"></script>
   <script src="cs-nav.js?v=2"></script>
-  <script src="nav.js"></script>
 </body>
 </html>

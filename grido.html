@@ -8,29 +8,36 @@
 <title>Grido — Angelo Tignanelli</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=42">
-<link rel="stylesheet" href="cs.css?v=8">
-  <script>
-  document.addEventListener('DOMContentLoaded', function(){
-    var nav = document.querySelector('.nav');
-    var last = 0;
-    window.addEventListener('scroll', function(){
-      if(window.innerWidth <= 768) return;
-      var cur = window.scrollY;
-      if(cur > last && cur > 10){
-        nav.classList.add('nav--hidden');
-      } else {
-        nav.classList.remove('nav--hidden');
-      }
-      last = cur;
-    }, {passive: true});
-  });
-  </script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="diario.css?v=2">
+<link rel="stylesheet" href="caso.css?v=3">
 </head>
-<body style="--accent:#86CDE9; --accent-ink:#0E0E0E;" data-screen-label="Case · Grido">
+<body style="--case:#86CDE9;" data-screen-label="Case · Grido">
 
-  <header class="nav"><div class="inner"><a class="brand" href="index.html"><span class="dot"><svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="9" y="8" width="11" height="10" fill="currentColor" opacity="0.22"/><text x="0" y="17" font-family="'Crimson Text', Georgia, serif" font-weight="700" font-size="18" letter-spacing="-0.05em" fill="currentColor">AT</text></svg></span><span class="who"><b>Angelo Tignanelli</b><span><span data-lang="en">Product Designer · BA</span><span data-lang="es">Diseñador de Producto · BA</span></span></span></a><div class="right"><nav class="links"><a href="index.html#work"><span data-lang="en">Work</span><span data-lang="es">Trabajo</span></a><a href="index.html#about"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a><a href="index.html#contact" class="cta"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></nav><div class="lang"><button data-l="es" type="button">ES</button><span class="sep">/</span><button data-l="en" type="button">EN</button></div></div><button class="ham" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></header>
+  <div class="ticker mono" aria-label="Status">
+  <span class="live">● Live</span>
+  <div class="track" aria-hidden="true">
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+  </div>
+</div>
+<header class="wrap">
+  <div class="mast">
+    <a class="brand" href="index.html">Angelo<span>.</span></a>
+    <div class="date mono"><span class="today"><span id="today-en" data-lang="en"></span><span id="today-es" data-lang="es"></span><br></span><span class="city">Buenos Aires · </span><span class="lang"><button data-l="en" type="button">EN</button> / <button data-l="es" type="button">ES</button></span></div>
+  </div>
+  <nav class="nav">
+    <a href="index.html#work"><span data-lang="en">Work</span><span data-lang="es">Trabajo</span></a>
+    <a href="index.html#about"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a>
+    <a href="index.html#writing"><span data-lang="en">Writing</span><span data-lang="es">Escritos</span></a>
+    <span class="sp"></span>
+    <a class="cta" href="#contact"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+  </nav>
+  <div class="crumbs mono"><a href="index.html#work">← <span data-lang="en">All work</span><span data-lang="es">Todos los proyectos</span></a><span><span data-lang="en">Case</span><span data-lang="es">Caso</span> 04 / 05</span></div>
+</header>
+
               <section class="cs-hero">
     <img class="cs-hero-bg" src="assets/hero/hero-grido-opt.jpg" alt="" aria-hidden="true">
     <div class="wrap">
@@ -72,10 +79,23 @@
     </div>
   </div>
   <section class="cs-outcome"><div class="wrap"><div class="label"><span data-lang="en">Outcome</span><span data-lang="es">Resultado</span></div><h2><span data-lang="en">An audit that became a roadmap — and a UI ready to ship.</span><span data-lang="es">Una auditoría que se volvió roadmap — y una UI lista para salir.</span></h2><div class="cols"><div class="col"><div class="n">4</div><div class="l"><span data-lang="en">core flows audited: order, payment, tracking and cancellation.</span><span data-lang="es">flujos centrales auditados: pedido, pago, seguimiento y cancelación.</span></div></div><div class="col"><div class="n"><span data-lang="en">New</span><span data-lang="es">Nuevas</span></div><div class="l"><span data-lang="en">sections proposed: live status, Club Grido and street delivery.</span><span data-lang="es">secciones propuestas: estado en vivo, Club Grido y entrega en la calle.</span></div></div><div class="col"><div class="n">Hand-off</div><div class="l"><span data-lang="en">a brand-true UI delivered to the frontend team.</span><span data-lang="es">una UI fiel a la marca entregada al equipo de frontend.</span></div></div></div></div></section>
-  <nav class="cs-next"><a href="grape.html"><div class="wrap"><div class="k"><span data-lang="en">Next project</span><span data-lang="es">Próximo proyecto</span></div><div class="row"><div class="nm">Grape</div><div class="arw">→</div></div></div></a></nav>
-  <footer class="footer" id="contact"><div class="wrap"><div class="ftop"><span class="lbl">Buenos Aires</span><span class="ln"></span><span class="lbl" style="display:flex;align-items:center;gap:8px;"><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span></span></div><div class="big"><span data-lang="en">Wanna talk?</span><span data-lang="es">¿Hablamos?</span><br><a href="mailto:angelotignanelli@gmail.com" class="u"><span data-lang="en">contact me :)</span><span data-lang="es">escribime :)</span></a></div><div class="fbottom"><div class="socials"><a class="s" href="https://www.behance.net/angelotign133e" target="_blank" rel="noopener">Be</a><a class="s" href="https://medium.com/@angelotignanelli" target="_blank" rel="noopener">Md</a><a class="s" href="https://www.linkedin.com/in/angelotignanelli/" target="_blank" rel="noopener">In</a><a class="s" href="https://www.instagram.com/angetignanelli/" target="_blank" rel="noopener">Ig</a></div><div class="say"><span><span data-lang="en">Say hi</span><span data-lang="es">Saludá</span></span><b>angelotignanelli@gmail.com</b></div></div></div></footer>
+  <nav class="cs-next"><a href="henry.html"><div class="wrap"><div class="k"><span data-lang="en">Next project</span><span data-lang="es">Próximo proyecto</span></div><div class="row"><div class="nm">Henry</div><div class="arw">→</div></div></div></a></nav>
+  <section id="contact" class="contact">
+  <div class="wrap">
+    <p class="big"><span data-lang="en">Wanna talk?</span><span data-lang="es">¿Hablamos?</span><br><a href="mailto:angelotignanelli@gmail.com"><span data-lang="en">contact me :)</span><span data-lang="es">escribime :)</span></a></p>
+    <p class="links"><a href="mailto:angelotignanelli@gmail.com"><b>angelotignanelli@gmail.com</b></a><span class="sep"> · </span> <a href="https://www.linkedin.com/in/angelotignanelli/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.behance.net/angelotign133e" target="_blank" rel="noopener">Behance</a> · <a href="https://medium.com/@angelotignanelli" target="_blank" rel="noopener">Medium</a> · <a href="https://www.instagram.com/angetignanelli/" target="_blank" rel="noopener">Instagram</a></p>
+  </div>
+</section>
+<script>
+  (function () {
+    var d = new Date(), en = document.getElementById('today-en'), es = document.getElementById('today-es');
+    try {
+      if (en) en.textContent = d.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+      if (es) es.textContent = d.toLocaleDateString('es-AR', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+    } catch (e) {}
+  })();
+</script>
   <script src="i18n.js"></script>
   <script src="cs-nav.js?v=2"></script>
-  <script src="nav.js"></script>
 </body>
 </html>
