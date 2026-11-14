@@ -197,7 +197,7 @@ html[lang="es"] .cs-sidenav nav::before{content:"En esta nota";}
 .dcols .txt{margin:16px 0 0; font-family:var(--serif); font-size:17px; line-height:1.5; color:#2A2A2A;}
 .dcols .row{margin-top:18px; padding-top:14px; border-top:1px dashed rgba(18,18,18,.2);}
 .dcols .row + .row{margin-top:12px;}
-.dcols .tag{display:inline-block; font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; padding:5px 8px; border-radius:4px;}
+.dcols .tag{display:inline-block; font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; padding:5px 8px; border-radius:4px;}
 .dcols .tag.gain{background:#E5EDE7; color:#4F7565;} .dcols .tag.loss{background:#F2E2DA; color:#A24A32;}
 .dcols .row p{margin:8px 0 0; font-family:var(--serif); font-size:16px; line-height:1.45; color:#3D3D3D;}
 @media (max-width:760px){
