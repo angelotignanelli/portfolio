@@ -107,6 +107,7 @@ html.motion.reveal-all .shead::after, html.motion.reveal-all .opinion::before{tr
   .story[href="grape.html"] .ph, .cs-hero-bg[src*="hero-grape"]{view-transition-name:case-grape;}
   .story[href="grido.html"] .ph, .cs-hero-bg[src*="hero-grido"]{view-transition-name:case-grido;}
   .story[href="henry.html"] .ph, .cs-hero-bg[src*="hero-henry"]{view-transition-name:case-henry;}
+  .story[href="tecito.html"] .ph, .cs-hero-bg[src*="hero-tecito"]{view-transition-name:case-tecito;}
   ::view-transition-old(*), ::view-transition-new(*){object-fit:cover;}
 }
 

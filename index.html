@@ -23,8 +23,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="diario.css?v=16">
-<link rel="stylesheet" href="motion.css?v=2">
+<link rel="stylesheet" href="diario.css?v=17">
+<link rel="stylesheet" href="motion.css?v=3">
 <script>
 /* Analytics: abrí el sitio con ?notrack para no contar las visitas de este navegador (?track lo vuelve a activar). */
 try{var q=location.search;if(/[?&]notrack(&|=|$)/.test(q))localStorage.setItem('va-disable','1');if(/[?&]track(&|=|$)/.test(q))localStorage.removeItem('va-disable');}catch(e){}
@@ -38,17 +38,17 @@ window.va('beforeSend',function(ev){try{if(localStorage.getItem('va-disable'))re
 <div class="ticker mono" aria-label="Status">
   <span class="live">● Live</span>
   <div class="track" aria-hidden="true">
+    <span class="news"><span data-lang="en">New case · Tecito, built 100% with AI</span><span data-lang="es">Caso nuevo · Tecito, hecho 100% con IA</span></span>
     <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span class="news"><span data-lang="en">New case · Tecito, built 100% with AI</span><span data-lang="es">Caso nuevo · Tecito, hecho 100% con IA</span></span>
     <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span class="news"><span data-lang="en">New case · Tecito, built 100% with AI</span><span data-lang="es">Caso nuevo · Tecito, hecho 100% con IA</span></span>
     <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span class="news"><span data-lang="en">New case · Tecito, built 100% with AI</span><span data-lang="es">Caso nuevo · Tecito, hecho 100% con IA</span></span>
     <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span class="news"><span data-lang="en">New case · Tecito, built 100% with AI</span><span data-lang="es">Caso nuevo · Tecito, hecho 100% con IA</span></span>
     <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
-    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
-    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
-    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
-    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
-    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
-    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span class="news"><span data-lang="en">New case · Tecito, built 100% with AI</span><span data-lang="es">Caso nuevo · Tecito, hecho 100% con IA</span></span>
     <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
   </div>
 </div>
@@ -101,22 +101,23 @@ window.va('beforeSend',function(ev){try{if(localStorage.getItem('va-disable'))re
       <span class="mono"><span data-lang="en">5 stories</span><span data-lang="es">5 casos</span></span>
     </div>
     <div class="row1">
-      <a class="story lead" href="wejoin.html">
-        <div class="ph bleed zoom"><img src="assets/card-wejoin.webp" alt="WeJoin screens"></div>
-        <div class="k mono">Marketplace</div>
-        <h3><span data-lang="en">We Join turns distrust into a tracked, transparent job</span><span data-lang="es">We Join convierte la desconfianza en un trabajo seguido y transparente</span></h3>
-        <p><span data-lang="en">A two-sided marketplace to find and hire home services, and to track every job from beginning to end.</span><span data-lang="es">Un marketplace para encontrar y contratar servicios del hogar, y seguir cada trabajo de principio a fin.</span></p>
+      <a class="story lead" href="tecito.html">
+        <div class="ph fill" style="background:#D3DDCB"><picture data-lang="en"><source media="(max-width:760px)" srcset="assets/card-tecito-m-en.jpg"><img src="assets/card-tecito-en.jpg" alt="Tecito screens"></picture><picture data-lang="es"><source media="(max-width:760px)" srcset="assets/card-tecito-m-es.jpg"><img src="assets/card-tecito-es.jpg" alt="Tecito screens"></picture></div>
+        <div class="newtag mono">● <span data-lang="en">New · Designed &amp; built 100% with AI</span><span data-lang="es">Nuevo · Diseñado y construido 100% con IA</span></div>
+        <div class="k mono">Healthtech · 0→1</div>
+        <h3><span data-lang="en">Tecito: a practice that books itself</span><span data-lang="es">Tecito: un consultorio que se agenda solo</span></h3>
+        <p><span data-lang="en">Online booking for health professionals, from first commit to production in seven weeks with Claude Code, GitHub and Vercel.</span><span data-lang="es">Turnos online para profesionales de la salud, del primer commit a producción en siete semanas con Claude Code, GitHub y Vercel.</span></p>
       </a>
       <div class="side">
+        <a class="story" href="wejoin.html">
+          <div class="ph bleed zoom" style="background:#FFD146"><img src="assets/card-wejoin.webp" alt="WeJoin screens"></div>
+          <div class="k mono">Marketplace</div>
+          <h3><span data-lang="en">We Join turns distrust into a tracked, transparent job</span><span data-lang="es">We Join convierte la desconfianza en un trabajo seguido y transparente</span></h3>
+        </a>
         <a class="story" href="zerenly.html">
           <div class="ph bleed crop" style="background:#EBD2FD"><img src="assets/card-zerenly.webp" alt="Zerenly screens"></div>
           <div class="k mono"><span data-lang="en">Health</span><span data-lang="es">Salud</span></div>
           <h3><span data-lang="en">Zerenly makes emotional support approachable</span><span data-lang="es">Zerenly acerca el apoyo emocional a quien lo necesita</span></h3>
-        </a>
-        <a class="story" href="grape.html">
-          <div class="ph bleed lift" style="background:#F5D1F5"><img src="assets/card-grape.webp" alt="Grape screens"></div>
-          <div class="k mono">Fintech</div>
-          <h3><span data-lang="en">Grape: banking an older user can navigate without fear</span><span data-lang="es">Grape: un banco que una persona mayor puede usar sin miedo</span></h3>
         </a>
       </div>
     </div>

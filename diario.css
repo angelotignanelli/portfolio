@@ -205,3 +205,9 @@ figcaption{margin-top:10px; font-size:13px; color:var(--muted);}
   .contact .links{font-size:14px; margin-top:24px;}
   .contact .links .sep{display:block; height:0; overflow:hidden;}
 }
+
+/* Nota nueva: sello amarillo sobre el titular de la nota de tapa, y aviso en el ticker. */
+.newtag{display:inline-block; margin-top:16px; padding:6px 10px; background:var(--accent); color:var(--ink); font-size:11px; font-weight:500;}
+.story .newtag + .k{margin-top:12px;}
+.ticker .track > span.news{color:var(--accent);}
+@media (max-width:760px){ .newtag{font-size:10px; margin-top:14px;} }

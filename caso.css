@@ -180,3 +180,29 @@ html[lang="es"] .cs-sidenav nav::before{content:"En esta nota";}
   .cs-next .wrap{padding-top:28px; padding-bottom:32px;}
   .cs-next .nm{font-size:44px;}
 }
+
+/* ---------- decisiones clave · columnas (Tecito en adelante) ----------
+   Tres columnas con filetes: número grande, opciones evaluadas (la elegida
+   marcada, las descartadas tachadas), y "Por qué" / "Resigné" con etiqueta. */
+.dcols{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-bottom:1px solid var(--ink); margin-top:-12px;}
+.dcols .dc{padding:28px 26px 30px; display:flex; flex-direction:column;}
+.dcols .dc + .dc{border-left:1px solid var(--rule);}
+.dcols .dc:first-child{padding-left:0;} .dcols .dc:last-child{padding-right:0;}
+.dcols .num{font-family:var(--serif); font-style:italic; font-size:56px; line-height:.9; letter-spacing:-.03em; color:#3B4A38;}
+.dcols h3{margin:14px 0 0; font-family:var(--serif); font-weight:600; font-size:26px; line-height:1.1; letter-spacing:-.02em;}
+.dcols .opts{display:flex; flex-wrap:wrap; gap:6px; margin-top:16px;}
+.dcols .opts > span{font-size:12.5px; line-height:1; padding:7px 10px; border-radius:999px; border:1px solid rgba(18,18,18,.18); color:#8A877F; text-decoration:line-through; text-decoration-color:rgba(18,18,18,.3);}
+.dcols .opts > span.pick{background:var(--ink); border-color:var(--ink); color:var(--paper); text-decoration:none;}
+.dcols .opts > span.pick::before{content:"✓ ";}
+.dcols .txt{margin:16px 0 0; font-family:var(--serif); font-size:17px; line-height:1.5; color:#2A2A2A;}
+.dcols .row{margin-top:18px; padding-top:14px; border-top:1px dashed rgba(18,18,18,.2);}
+.dcols .row + .row{margin-top:12px;}
+.dcols .tag{display:inline-block; font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; padding:5px 8px; border-radius:4px;}
+.dcols .tag.gain{background:#E5EDE7; color:#4F7565;} .dcols .tag.loss{background:#F2E2DA; color:#A24A32;}
+.dcols .row p{margin:8px 0 0; font-family:var(--serif); font-size:16px; line-height:1.45; color:#3D3D3D;}
+@media (max-width:760px){
+  .dcols{grid-template-columns:1fr; margin-top:0;}
+  .dcols .dc{padding:24px 0;}
+  .dcols .dc + .dc{border-left:0; border-top:1px solid var(--rule);}
+  .dcols .num{font-size:44px;}
+}
