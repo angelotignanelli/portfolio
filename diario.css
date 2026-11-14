@@ -92,11 +92,9 @@ figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); fo
 .row1 .lead p{margin:12px 0 0; font-family:var(--serif); font-size:18px; line-height:1.5; color:var(--ink-2); max-width:620px;}
 .side{display:flex; flex-direction:column; gap:28px; padding-left:32px; border-left:1px solid var(--rule);}
 .side h3{font-size:26px;}
-.row2{display:grid; grid-template-columns:5fr 5fr 2fr; gap:40px; padding-top:36px;}
+.row2{display:grid; grid-template-columns:1fr 1fr; gap:40px; padding-top:36px;}
 .row2 .ph{aspect-ratio:16/10;}
 .row2 h3{font-size:30px;}
-.next{font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.35; color:var(--muted);}
-.next b{font-style:normal; color:var(--ink);}
 
 /* ---------- opinion ---------- */
 .opinion{margin-top:var(--sec); padding:112px 0 40px; border-top:3px solid var(--ink); text-align:center;}
@@ -179,7 +177,6 @@ figcaption{margin-top:10px; padding-top:8px; border-top:1px solid var(--ink); fo
   .side h3, .row2 h3{font-size:24px;}
   .story .k{margin-top:12px;}
   .row2{padding-top:28px;}
-  .next{font-size:18px; padding-top:20px; border-top:1px solid var(--rule);}
 
   .opinion{margin-top:56px; padding:48px 0 8px;}
   .opinion blockquote{font-size:30px; line-height:1.15; margin-top:18px;}
