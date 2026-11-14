@@ -1,292 +1,169 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 <script>try{document.documentElement.lang=localStorage.getItem('lang')||'en'}catch(e){}</script>
 <title>Angelo Tignanelli — Product Designer</title>
+<meta name="description" content="Senior Product Designer based in Buenos Aires. 10+ years and 30+ startups aligning business and users.">
+<meta property="og:title" content="Angelo Tignanelli — Product Designer">
+<meta property="og:description" content="Senior Product Designer based in Buenos Aires. 10+ years and 30+ startups aligning business and users.">
+<meta property="og:image" content="assets/portrait-color.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=44">
-<link rel="stylesheet" href="cs.css?v=5">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="diario.css?v=2">
 </head>
-<body data-screen-label="Home">
+<body>
 
-  <!-- NAV -->
-  <header class="nav anim anim-d1">
-    <div class="inner">
-      <a class="brand" href="index.html">
-        <span class="dot">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="7" y="7" width="10" height="10" fill="currentColor" opacity="0.18"/>
-            <text x="0" y="16" font-family="'Crimson Text', Georgia, serif" font-weight="700" font-size="18" letter-spacing="-0.06em" fill="currentColor">AT</text>
-          </svg>
-        </span>
-        <span class="who"><b>Angelo Tignanelli</b></span>
-      </a>
-      <div class="right">
-        <nav class="links">
-          <a href="#work"><span data-lang="en">Work</span><span data-lang="es">Trabajo</span></a>
-          <a href="#about"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a>
-          <a href="#contact" class="cta"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
-        </nav>
-        <div class="lang"><button data-l="es" type="button">ES</button><span class="sep">/</span><button data-l="en" type="button">EN</button></div>
-      </div>
-      <button class="ham" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </header>
+<div class="ticker mono" aria-label="Status">
+  <span class="live">● Live</span>
+  <div class="track" aria-hidden="true">
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+    <span><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span> · Senior Product Designer · Buenos Aires</span>
+  </div>
+</div>
 
-  <!-- HERO -->
+<header class="wrap">
+  <div class="mast">
+    <a class="brand" href="index.html">Angelo<span>.</span></a>
+    <div class="date mono"><span class="today"><span id="today-en" data-lang="en"></span><span id="today-es" data-lang="es"></span><br></span><span class="city">Buenos Aires · </span><span class="lang"><button data-l="en" type="button">EN</button> / <button data-l="es" type="button">ES</button></span></div>
+  </div>
+  <nav class="nav">
+    <a href="#work"><span data-lang="en">Work</span><span data-lang="es">Trabajo</span></a>
+    <a href="#about"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a>
+    <a href="#writing"><span data-lang="en">Writing</span><span data-lang="es">Escritos</span></a>
+    <span class="sp"></span>
+    <a class="cta" href="#contact"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+  </nav>
+</header>
+
+<main class="wrap">
   <section class="hero">
-    <div class="wrap">
-      <div class="stripe" id="hero-stripe" aria-hidden="true"></div>
-      <div class="dots" aria-hidden="true"></div>
-      <div class="row">
-        <div class="left">
-          <h1 id="hero-h1" class="anim anim-d2">
-            <span class="outline">Angelo</span>
-            <span class="filled">Tignanelli</span>
-          </h1>
-          <p class="sub anim anim-d3"><span data-lang="en">A Product Designer and a firm believer that the best product is one that aligns the business and the user equally — understanding limitations as design opportunities.</span><span data-lang="es">Diseñador de Producto y un firme creyente de que el mejor producto es el que alinea por igual al negocio y al usuario — entendiendo las limitaciones como oportunidades de diseño.</span></p>
-          <div class="cta-wrap anim anim-d4">
-            <a class="btn" href="#work">
-              <span><span data-lang="en">Check out my projects</span><span data-lang="es">Mirá mis proyectos</span></span>
-              <span class="arw"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
-            </a>
-          </div>
-        </div>
-        <div class="portrait-stack anim anim-d5">
-          <div class="p-bw"><img src="assets/portrait-bw.jpg" alt=""></div>
-          <div class="p-color"><img src="assets/portrait-color.webp" alt="Angelo Tignanelli"></div>
-        </div>
-      </div>
+    <article>
+      <div class="mono"><span data-lang="en">Front page</span><span data-lang="es">Portada</span></div>
+      <h1>
+        <span data-lang="en">Product designer says business and users <i class="hl">can agree</i></span>
+        <span data-lang="es">Diseñador asegura que negocio y usuarios <i class="hl">pueden coincidir</i></span>
+      </h1>
+      <p class="deck">
+        <span data-lang="en">Ten years and more than 30 startups taught Angelo Tignanelli to understand limitations as design opportunities.</span>
+        <span data-lang="es">Diez años y más de 30 startups le enseñaron a Angelo Tignanelli a entender las limitaciones como oportunidades de diseño.</span>
+      </p>
+      <a class="btn" href="#work"><span data-lang="en">Read the work</span><span data-lang="es">Ver los proyectos</span> <svg width="16" height="12" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M0 7h17M11 1l6 6-6 6"/></svg></a>
+    </article>
+    <figure style="margin:0;">
+      <div class="photo"><img src="assets/portrait-color.webp" alt="Angelo Tignanelli"></div>
+      <figcaption>Angelo Tignanelli, Senior Product Designer.</figcaption>
+    </figure>
+  </section>
+
+  <section class="clients" aria-label="Clients">
+    <span class="mono"><span data-lang="en">Worked with</span><span data-lang="es">Trabajé con</span></span>
+    <div class="logos">
+      <img src="assets/logo-qira.png" alt="QIRA"><img src="assets/logo-modo.png" alt="MODO"><img src="assets/logo-osde.png" alt="OSDE"><img src="assets/logo-uils.png" alt="UILS"><img src="assets/logo-claro.png" alt="Claro">
     </div>
   </section>
 
-  <script>
-  // Position yellow stripe behind .filled text
-  function positionStripe(){
-    const filled = document.querySelector('.hero h1 .filled');
-    const stripe = document.getElementById('hero-stripe');
-    if(!filled || !stripe) return;
-    const r = filled.getBoundingClientRect();
-    const heroR = document.querySelector('.hero').getBoundingClientRect();
-    const bandH = r.height * 1.0 - 20;
-    const top = r.top - heroR.top + (r.height - bandH) / 2;
-    stripe.style.top = top + 'px';
-    stripe.style.height = bandH + 'px';
-  }
-  window.addEventListener('load', positionStripe);
-  window.addEventListener('resize', positionStripe);
-  positionStripe();
-  </script>
-
-  <script>
-  (function(){
-    var nav = document.querySelector('.nav');
-    var last = 0;
-    window.addEventListener('scroll', function(){
-      if(window.innerWidth <= 768) return;
-      var cur = window.scrollY;
-      if(cur > last && cur > 10){
-        nav.classList.add('nav--hidden');
-      } else {
-        nav.classList.remove('nav--hidden');
-      }
-      last = cur;
-    }, {passive: true});
-  })();
-  </script>
-
-  <!-- LOGOS -->
-  <section class="logos">
-    <div class="inner">
-      <img src="assets/logo-qira.png" alt="QIRA">
-      <img src="assets/logo-modo.png" alt="MODO">
-      <img src="assets/logo-osde.png" alt="OSDE">
-      <img src="assets/logo-uils.png" alt="UILS">
-      <img src="assets/logo-claro.png" alt="Claro">
+  <section id="work" class="work">
+    <div class="shead">
+      <h2><span data-lang="en">The Work</span><span data-lang="es">Proyectos</span></h2>
+      <span class="mono"><span data-lang="en">5 stories</span><span data-lang="es">5 casos</span></span>
     </div>
-  </section>
-
-  <!-- WORK -->
-  <main class="wrap" id="work">
-    <div class="sec-head">
-      <div class="t" style="text-align:center;"><span style="-webkit-text-stroke:1.5px var(--ink);color:transparent;font-family:var(--display);font-weight:700;"><span data-lang="en">Some of my</span><span data-lang="es">Algunos de mis</span></span> <span class="hl"><span data-lang="en">projects</span><span data-lang="es">proyectos</span></span></div>
-    </div>
-
-    <section class="work">
-
-      <!-- WeJoin -->
-      <a class="card wide card--wejoin" href="wejoin.html" data-screen-label="Card · WeJoin" style="min-height:388px; margin-top:24px;">
-        <span class="corner" style="position:absolute; bottom:24px; left:40px; z-index:5;"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
-        <div class="body">
-          <span class="ix"><span data-lang="en">UX / UI · Product</span><span data-lang="es">UX / UI · Producto</span></span>
-          <h3><span data-lang="en">We Join, low cost domestic services</span><span data-lang="es">We Join, servicios domésticos low cost</span></h3>
-          <p><span data-lang="en">Find and track home services — repairs, painting, plumbing, and more.</span><span data-lang="es">Encontrá y seguí servicios del hogar: arreglos, pintura, plomería y más.</span></p>
-        </div>
-        <div class="art">
-          <img src="assets/card-wejoin.webp" alt="WeJoin mockup" loading="lazy"
-               style="position:absolute; top:-140px; right:0; bottom:0; left:0; width:100%; height:calc(100% + 140px); object-fit:contain; object-position:bottom right;">
-        </div>
+    <div class="row1">
+      <a class="story lead" href="wejoin.html">
+        <div class="ph bleed"><img src="assets/card-wejoin.webp" alt="WeJoin screens"></div>
+        <div class="k mono">Marketplace</div>
+        <h3><span data-lang="en">We Join turns distrust into a tracked, transparent job</span><span data-lang="es">We Join convierte la desconfianza en un trabajo seguido y transparente</span></h3>
+        <p><span data-lang="en">A two-sided marketplace to find and hire home services, and to track every job from beginning to end.</span><span data-lang="es">Un marketplace para encontrar y contratar servicios del hogar, y seguir cada trabajo de principio a fin.</span></p>
       </a>
-
-      <!-- Zerenly + Grape row (2fr / 1fr) -->
-      <div class="card-row card-row--h">
-
-      <!-- Zerenly -->
-      <a class="card card--zerenly" href="zerenly.html" data-screen-label="Card · Zerenly">
-        <span class="corner" style="position:absolute; bottom:24px; left:36px; z-index:5;"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
-        <div class="body" style="width:auto; flex:1; min-width:0;">
-          <span class="ix"><span data-lang="en">UX / UI · Health</span><span data-lang="es">UX / UI · Salud</span></span>
-          <h3><span data-lang="en">Zerenly, emotional support platform</span><span data-lang="es">Zerenly, plataforma de apoyo emocional</span></h3>
-          <p><span data-lang="en">Mental health support for people who need individual or group help through a personal crisis.</span><span data-lang="es">Apoyo emocional individual o grupal para atravesar una crisis personal.</span></p>
-        </div>
-        <div class="art" style="flex:none; width:45%;">
-          <img src="assets/card-zerenly.webp" alt="Zerenly mockup" loading="lazy"
-               style="position:absolute; top:0; right:24px; bottom:0; left:10%; width:calc(90% - 24px); height:100%; object-fit:contain; object-position:bottom right;">
-        </div>
-      </a>
-
-      <!-- Grape -->
-      <a class="card card--col card--grape" href="grape.html" data-screen-label="Card · Grape" style="overflow:hidden; aspect-ratio:1;">
-        <span class="corner" style="position:absolute; top:24px; right:24px; z-index:5;"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
-        <div class="body" style="padding:24px 24px 12px;">
-          <span class="ix"><span data-lang="en">UX / UI · Fintech</span><span data-lang="es">UX / UI · Fintech</span></span>
-          <h3><span data-lang="en">Grape wallet</span><span data-lang="es">Grape wallet</span></h3>
-          <p><span data-lang="en">A banking platform centered in a senior public with accessibility problems.</span><span data-lang="es">Una billetera financiera centrada en la accesibilidad para un público senior.</span></p>
-        </div>
-        <div class="art">
-          <img src="assets/card-grape.webp" alt="Grape mockup" loading="lazy"
-               style="position:absolute; top:0; bottom:0; left:24px; right:24px; width:calc(100% - 48px); height:100%; object-fit:contain; object-position:bottom center;">
-        </div>
-      </a>
-
-      </div><!-- end Zerenly+Grape row -->
-
-      <!-- Grido -->
-      <a class="card wide card--grido" href="grido.html" data-screen-label="Card · Grido">
-        <span class="corner" style="position:absolute; bottom:24px; left:40px; z-index:5;"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
-        <div class="body">
-          <span class="ix"><span data-lang="en">Product audit · UI</span><span data-lang="es">Auditoría de producto · UI</span></span>
-          <h3><span data-lang="en">Grido, the 4th biggest ice cream producer</span><span data-lang="es">Grido, la heladería gigante</span></h3>
-          <p><span data-lang="en">4th largest ice cream chain in the world, present across Latin America and Europe.</span><span data-lang="es">La cuarta heladería más grande del mundo, con presencia en toda Latinoamérica y Europa.</span></p>
-        </div>
-        <div class="art" style="aspect-ratio:2660/1788;">
-          <img src="assets/card-grido.webp" alt="Grido mockup" loading="lazy"
-               style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top;">
-        </div>
-      </a>
-
-      <!-- Henry + Pinamed row (2fr / 1fr) -->
-      <div class="card-row">
-
-      <!-- Henry -->
-      <a class="card card--col card--henry" href="henry.html" data-screen-label="Card · Henry">
-        <span class="corner" style="position:absolute; top:24px; right:24px; z-index:5;"><svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 7h17M11 1l6 6-6 6"/></svg></span>
-        <div class="body">
-          <span class="ix"><span data-lang="en">UX / UI · Edtech</span><span data-lang="es">UX / UI · Edtech</span></span>
-          <h3><span data-lang="en">Henry, edtech latam platform</span><span data-lang="es">Henry, academia de desarrollo web</span></h3>
-          <p><span data-lang="en">Full Stack Web Development or Data Science Academy with no upfront cost, where the tuition is paid once the student secures a job.</span><span data-lang="es">Estudiás ahora, pagás cuando conseguís trabajo.</span></p>
-        </div>
-        <div class="art" style="overflow:visible; flex:none;">
-          <img src="assets/card-henry.webp" alt="Henry mockup" loading="lazy"
-               style="display:block; width:100%; height:auto; margin-bottom:-60px;">
-        </div>
-      </a>
-
-      <!-- Pinamed -->
-      <div class="pinamed-wrap">
-        <a class="card card--col" href="#" data-screen-label="Card · Pinamed" style="cursor:default; pointer-events:none; aspect-ratio:1;">
-          <span class="badge"><span data-lang="en">Soon</span><span data-lang="es">Pronto</span></span>
-          <div class="body">
-            <span class="ix"><span data-lang="en">UX / UI · Health</span><span data-lang="es">UX / UI · Salud</span></span>
-            <h3>Pinamed</h3>
-            <p><span data-lang="en">A banking platform centered in a senior public with accessibility problems.</span><span data-lang="es">Una plataforma para encontrar y reservar turnos médicos.</span></p>
-          </div>
-          <div class="pinamed-art" style="opacity:.6;">
-            <img src="assets/card-pinamed.png" alt="Pinamed mockup" loading="lazy">
-          </div>
+      <div class="side">
+        <a class="story" href="zerenly.html">
+          <div class="ph bleed crop" style="background:#EBD2FD"><img src="assets/card-zerenly.webp" alt="Zerenly screens"></div>
+          <div class="k mono"><span data-lang="en">Health</span><span data-lang="es">Salud</span></div>
+          <h3><span data-lang="en">Zerenly makes emotional support approachable</span><span data-lang="es">Zerenly acerca el apoyo emocional a quien lo necesita</span></h3>
+        </a>
+        <a class="story" href="grape.html">
+          <div class="ph bleed" style="background:#F5D1F5"><img src="assets/card-grape.webp" alt="Grape screens"></div>
+          <div class="k mono">Fintech</div>
+          <h3><span data-lang="en">Grape: banking an older user can navigate without fear</span><span data-lang="es">Grape: un banco que una persona mayor puede usar sin miedo</span></h3>
         </a>
       </div>
+    </div>
+    <div class="row2">
+      <a class="story" href="grido.html">
+        <div class="ph fill" style="background:#86CDE9"><img src="assets/card-grido.webp" alt="Grido screens"></div>
+        <div class="k mono"><span data-lang="en">Retail · Audit</span><span data-lang="es">Retail · Auditoría</span></div>
+        <h3><span data-lang="en">An audit of a global ice cream chain became a roadmap</span><span data-lang="es">Una auditoría a una cadena global de helados se convirtió en un roadmap</span></h3>
+      </a>
+      <a class="story" href="henry.html">
+        <div class="ph float" style="background:#CBADFF"><img src="assets/card-henry.webp" alt="Henry screens"></div>
+        <div class="k mono">Edtech</div>
+        <h3><span data-lang="en">Henry: study now, pay once you land a job</span><span data-lang="es">Henry: estudiás ahora, pagás cuando conseguís trabajo</span></h3>
+      </a>
+      <div class="next"><span data-lang="en">Next edition: <b>Pinamed</b>, booking medical appointments.</span><span data-lang="es">Próxima edición: <b>Pinamed</b>, turnos médicos online.</span></div>
+    </div>
+  </section>
 
-      </div><!-- end Henry+Pinamed row -->
+  <section id="about" class="opinion">
+    <div class="mono"><span data-lang="en">Opinion</span><span data-lang="es">Opinión</span></div>
+    <blockquote>
+      <span data-lang="en">“There's no better way to learn <span class="hl">than by teaching.</span>”</span>
+      <span data-lang="es">“No hay mejor forma de aprender <span class="hl">que enseñando.</span>”</span>
+    </blockquote>
+    <p>
+      <span data-lang="en">As a Senior Product Designer, I've led projects where going to market, raising a first round or pivoting a business model are common currency — and I've mentored the people who build them.</span>
+      <span data-lang="es">Como Diseñador de Producto Senior, lideré proyectos donde salir al mercado, levantar una primera ronda o pivotear un modelo de negocio son moneda corriente, y mentoreé a la gente que los construye.</span>
+    </p>
+    <div class="stats mono">
+      <span><b>10+</b><span data-lang="en">Years</span><span data-lang="es">Años</span></span>
+      <span><b>30+</b>Startups</span>
+      <span><b>BA</b>Buenos Aires</span>
+    </div>
+  </section>
 
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-      <div class="about-grid">
-
-        <!-- Left: title + text + stats -->
-        <div>
-          <div class="sec-head" style="margin:0 0 36px;">
-            <div class="t"><span style="-webkit-text-stroke:1.5px var(--ink);color:transparent;font-family:var(--display);font-weight:700;"><span data-lang="en">Who</span><span data-lang="es">¿Quién</span></span> <span class="hl"><span data-lang="en">am I?</span><span data-lang="es">soy?</span></span></div>
-          </div>
-
-          <p class="lead" style="margin-bottom:24px;"><span data-lang="en">As a Senior Product Designer, I've led projects where going to market, attracting a first round of investment, or pivoting a business model are common currency.</span><span data-lang="es">Como Diseñador de Producto Senior, lideré proyectos donde salir al mercado, conseguir una primera ronda de inversión o pivotear un modelo de negocio son moneda corriente.</span></p>
-
-          <p><span data-lang="en">Ten years of work with more than 30 startups seeking their first MVP has given me a high level of expertise early in my career — which usually finds me in search of new challenges that keep pushing my limits.</span><span data-lang="es">Diez años de trabajo con más de 30 startups buscando su primer MVP me dieron un alto nivel de expertise temprano en mi carrera.</span></p>
-
-          <p class="about-p3" style="margin-top:18px;"><span data-lang="en">I've also been fortunate to mentor and lead incredible people, guiding them not only in their projects but in their careers. I'm convinced there's no better way to learn than by teaching.</span><span data-lang="es">También tuve la suerte de mentorear y liderar gente increíble. Estoy convencido de que no hay mejor forma de aprender que enseñando.</span></p>
-
-          <!-- stats -->
-          <div class="about-stats">
-            <div style="padding:20px 0;border-right:1px solid var(--line);">
-              <div style="font-family:var(--display);font-weight:700;font-size:48px;line-height:1;letter-spacing:-.03em;">10+</div>
-              <div style="font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:10px;"><span data-lang="en">Years</span><span data-lang="es">Años</span></div>
-            </div>
-            <div style="padding:20px 24px;border-right:1px solid var(--line);">
-              <div style="font-family:var(--display);font-weight:700;font-size:48px;line-height:1;letter-spacing:-.03em;">30+</div>
-              <div style="font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:10px;">Startups</div>
-            </div>
-            <div style="padding:20px 24px;">
-              <div style="font-family:var(--display);font-weight:700;font-size:48px;line-height:1;letter-spacing:-.03em;">BA</div>
-              <div style="font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:10px;">Buenos Aires</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: photo B&W -->
-        <div class="about-photo">
-          <img src="assets/work-2.jpg" alt="Angelo pinning a thread" style="width:100%;height:100%;object-fit:cover;object-position:center center;filter:grayscale(1) contrast(1.05);">
-        </div>
-
-      </div>
-    </section>
-
-        <!-- BLOG -->
-    <section class="blog">
-      <div class="sec-head" style="text-align:right;">
-        <div class="t"><span style="-webkit-text-stroke:1.5px var(--ink);color:transparent;font-family:var(--display);font-weight:700;"><span data-lang="en">Blog and</span><span data-lang="es">Blog e</span></span> <span class="hl"><span data-lang="en">thoughts</span><span data-lang="es">ideas</span></span></div>
-      </div>
-      <div class="list">
-        <a class="row" href="https://medium.com/@angelotignanelli/cara-a-cara-con-el-cliente-25168368680a" target="_blank" rel="noopener"><span class="n">*01</span><span class="ti"><span class="k"><span data-lang="en">Blog entry</span><span data-lang="es">Entrada</span></span><span data-lang="en">Face to face with the client</span><span data-lang="es">Cara a cara con el cliente</span></span><span class="r"><span data-lang="en">Read article →</span><span data-lang="es">Leer artículo →</span></span></a>
-        <a class="row" href="https://medium.com/@angelotignanelli/un-mundo-con-ux-un-mundo-m%C3%A1s-simple-a2c90d0333f3" target="_blank" rel="noopener"><span class="n">*02</span><span class="ti"><span class="k"><span data-lang="en">Blog entry</span><span data-lang="es">Entrada</span></span><span data-lang="en">A world with UX</span><span data-lang="es">Un mundo con UX</span></span><span class="r"><span data-lang="en">Read article →</span><span data-lang="es">Leer artículo →</span></span></a>
-        <a class="row" href="https://medium.com/@angelotignanelli/ux-en-los-incre%C3%ADbles-6b064548b1dc" target="_blank" rel="noopener"><span class="n">*03</span><span class="ti"><span class="k"><span data-lang="en">Blog entry</span><span data-lang="es">Entrada</span></span><span data-lang="en">UX in The Incredibles</span><span data-lang="es">UX en Los Increíbles</span></span><span class="r"><span data-lang="en">Read article →</span><span data-lang="es">Leer artículo →</span></span></a>
-        <a class="row" href="https://medium.com/@angelotignanelli/testeando-ideas-de-negocio-paisanos-cdb0b05a6427" target="_blank" rel="noopener"><span class="n">*04</span><span class="ti"><span class="k"><span data-lang="en">Blog entry</span><span data-lang="es">Entrada</span></span><span data-lang="en">Testing business ideas</span><span data-lang="es">Testeando ideas de negocio</span></span><span class="r"><span data-lang="en">Read article →</span><span data-lang="es">Leer artículo →</span></span></a>
-        <a class="row" href="#"><span class="n">*05</span><span class="ti"><span class="k"><span data-lang="en">Blog entry</span><span data-lang="es">Entrada</span></span><span data-lang="en">The importance of culture</span><span data-lang="es">La importancia de la cultura</span></span><span class="r"><span data-lang="en">Read article — soon</span><span data-lang="es">Leer artículo — pronto</span></span></a>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <div class="wrap">
-      <div class="ftop"><span class="lbl">Buenos Aires</span><span class="ln"></span><span class="lbl" style="display:flex;align-items:center;gap:8px;"><span data-lang="en">Open to work</span><span data-lang="es">Disponible</span></span></div>
-      <div class="big"><span data-lang="en">Wanna talk?</span><span data-lang="es">¿Hablamos?</span><br><a href="mailto:angelotignanelli@gmail.com" class="u"><span data-lang="en">contact me :)</span><span data-lang="es">escribime :)</span></a></div>
-      <div class="fbottom">
-        <div class="socials">
-          <a class="s" href="https://www.behance.net/angelotign133e" target="_blank" rel="noopener">Be</a><a class="s" href="https://medium.com/@angelotignanelli" target="_blank" rel="noopener">Md</a><a class="s" href="https://www.linkedin.com/in/angelotignanelli/" target="_blank" rel="noopener">In</a><a class="s" href="https://www.instagram.com/angetignanelli/" target="_blank" rel="noopener">Ig</a>
-        </div>
-        <div class="say"><span><span data-lang="en">Say hi</span><span data-lang="es">Saludá</span></span><b>angelotignanelli@gmail.com</b></div>
+  <section id="writing" class="writing">
+    <div class="shead"><h2><span data-lang="en">Writing</span><span data-lang="es">Escritos</span></h2></div>
+    <div class="wgrid">
+      <aside class="col">
+        <img src="assets/work-2.jpg" alt="">
+        <div class="mono"><span data-lang="en">Columnist</span><span data-lang="es">Columnista</span></div>
+        <div class="name">Angelo Tignanelli</div>
+        <p><span data-lang="en">Notes on clients, UX and testing business ideas.</span><span data-lang="es">Notas sobre clientes, UX y cómo testear ideas de negocio.</span></p>
+        <a class="follow" href="https://medium.com/@angelotignanelli" target="_blank" rel="noopener"><span data-lang="en">Follow on Medium</span><span data-lang="es">Seguime en Medium</span> <svg width="16" height="12" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M0 7h17M11 1l6 6-6 6"/></svg></a>
+      </aside>
+      <div class="posts">
+        <a class="post" href="https://medium.com/@angelotignanelli/cara-a-cara-con-el-cliente-25168368680a" target="_blank" rel="noopener"><span class="n">01</span><span class="t"><span data-lang="en">Face to face with the client</span><span data-lang="es">Cara a cara con el cliente</span></span><span class="lead"></span><span class="r"><span data-lang="en">Read</span><span data-lang="es">Leer</span></span></a>
+        <a class="post" href="https://medium.com/@angelotignanelli/un-mundo-con-ux-un-mundo-m%C3%A1s-simple-a2c90d0333f3" target="_blank" rel="noopener"><span class="n">02</span><span class="t"><span data-lang="en">A world with UX</span><span data-lang="es">Un mundo con UX</span></span><span class="lead"></span><span class="r"><span data-lang="en">Read</span><span data-lang="es">Leer</span></span></a>
+        <a class="post" href="https://medium.com/@angelotignanelli/ux-en-los-incre%C3%ADbles-6b064548b1dc" target="_blank" rel="noopener"><span class="n">03</span><span class="t"><span data-lang="en">UX in The Incredibles</span><span data-lang="es">UX en Los Increíbles</span></span><span class="lead"></span><span class="r"><span data-lang="en">Read</span><span data-lang="es">Leer</span></span></a>
+        <a class="post" href="https://medium.com/@angelotignanelli/testeando-ideas-de-negocio-paisanos-cdb0b05a6427" target="_blank" rel="noopener"><span class="n">04</span><span class="t"><span data-lang="en">Testing business ideas</span><span data-lang="es">Testeando ideas de negocio</span></span><span class="lead"></span><span class="r"><span data-lang="en">Read</span><span data-lang="es">Leer</span></span></a>
+        <span class="post soon" aria-disabled="true"><span class="n">05</span><span class="t"><span data-lang="en">The importance of culture</span><span data-lang="es">La importancia de la cultura</span></span><span class="lead"></span><span class="r"><span data-lang="en">Soon</span><span data-lang="es">Pronto</span></span></span>
       </div>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script src="i18n.js"></script>
-  <script src="nav.js"></script>
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="big"><span data-lang="en">Wanna talk?</span><span data-lang="es">¿Hablamos?</span><br><a href="mailto:angelotignanelli@gmail.com"><span data-lang="en">contact me :)</span><span data-lang="es">escribime :)</span></a></p>
+    <p class="links"><a href="mailto:angelotignanelli@gmail.com"><b>angelotignanelli@gmail.com</b></a><span class="sep"> · </span> <a href="https://www.linkedin.com/in/angelotignanelli/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.behance.net/angelotign133e" target="_blank" rel="noopener">Behance</a> · <a href="https://medium.com/@angelotignanelli" target="_blank" rel="noopener">Medium</a> · <a href="https://www.instagram.com/angetignanelli/" target="_blank" rel="noopener">Instagram</a></p>
+  </div>
+</section>
+
+<script>
+  // Fecha del día en el cabezal, en cada idioma
+  (function () {
+    var d = new Date();
+    var en = document.getElementById('today-en'), es = document.getElementById('today-es');
+    try {
+      if (en) en.textContent = d.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+      if (es) es.textContent = d.toLocaleDateString('es-AR', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+    } catch (e) {}
+  })();
+</script>
+<script src="i18n.js"></script>
 </body>
 </html>
