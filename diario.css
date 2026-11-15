@@ -48,6 +48,8 @@ html[lang="en"] [data-lang="es"], html[lang="es"] [data-lang="en"]{display:none 
 .hero{display:grid; grid-template-columns:7fr 5fr; gap:48px; align-items:end; padding:72px 0;}
 .hero h1{margin:18px 0 0; font-family:var(--serif); font-weight:400; font-size:clamp(40px,6.4vw,92px); line-height:.98; letter-spacing:-.035em;}
 .hero h1 i{font-weight:600;}
+/* Spanish runs longer: a slightly smaller headline keeps it at 4 lines max. */
+html[lang="es"] .hero h1{font-size:clamp(40px,5.6vw,80px);}
 .hero .deck{margin:24px 0 0; font-family:var(--serif); font-size:21px; line-height:1.45; color:var(--ink-2); max-width:560px;}
 .btn{margin-top:32px; display:inline-flex; align-items:center; justify-content:center; gap:10px; height:52px; padding:0 24px; background:var(--ink); color:var(--paper); text-decoration:none; font-weight:600; font-size:15px;}
 .photo{position:relative; aspect-ratio:4/5; overflow:hidden; background:#DEDAD0;}
