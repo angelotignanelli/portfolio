@@ -172,15 +172,17 @@ figcaption{margin-top:10px; font-size:13px; color:var(--muted);}
 
   .shead h2{font-size:36px;}
   .work{margin-top:88px;}
-  .row1, .row2{grid-template-columns:1fr; gap:52px; padding:36px 0 44px;}
+  .row1, .row2{grid-template-columns:1fr; gap:56px; padding:36px 0 44px;}
+  /* Sin divisores entre proyectos en mobile: el aire parejo los separa. */
+  .row1{border-bottom:0; padding-bottom:0;}
   .row1 .lead .ph, .row2 .ph{aspect-ratio:4/3;}
   .row2 .ph.float{aspect-ratio:16/10;}
   .row1 .lead h3{font-size:30px; line-height:1.06;}
   .row1 .lead p{font-size:17px;}
-  .side{padding-left:0; border-left:0; gap:52px; padding-top:40px; border-top:1px solid var(--rule);}
+  .side{padding-left:0; border-left:0; gap:56px; padding-top:0; border-top:0;}
   .side h3, .row2 h3{font-size:24px;}
   .story .k{margin-top:12px;}
-  .row2{padding-top:40px; gap:52px;}
+  .row2{padding-top:56px; gap:56px;}
 
   .opinion{margin-top:56px; padding:64px 0 8px;}
   .opinion blockquote{font-size:30px; line-height:1.15; margin-top:18px;}
