@@ -2,9 +2,11 @@
 
 Fuente de verdad para cualquier cambio, caso nuevo o rediseño. Si el sitio cambia, se actualiza este archivo.
 
-> **Estado (noviembre de 2026):** todo el sitio usa el lenguaje "diario digital" de la sección 0: la home (`index.html` + `diario.css`) y los 5 casos (`*.html` + `diario.css` + `caso.css`). Las secciones 1 a 7 describen el diseño **anterior** (`styles.css`, `cs.css`) y quedan como referencia histórica; `wejoin-export.html` y `home-opciones.html` siguen con ese diseño y no están enlazadas.
+> **Estado (15 de noviembre de 2026):** todo el sitio usa el lenguaje "diario digital" de la sección 0: la home (`index.html` + `diario.css`) y los casos (`*.html` + `diario.css` + `caso.css`). Los casos actuales y sus reglas están en la sección 0b. Las secciones 1 a 6 describen el diseño **anterior** (`styles.css`, `cs.css`) y quedan como referencia histórica.
 >
-> **Formato de caso:** está definido en la skill del agente portfolio (`references/caso-de-estudio.md` + `references/plantilla-caso.html`). Resumen: hero (kicker, titular igual al de la home, bajada, ficha Rol · Año/Duración · Equipo · Alcance, **En corto**: Problema · Mi rol · Resultado, imagen 1920×788) → desafío + contexto/enfoque → secciones 01 Discovery · 02 Framing · 03 **Decisiones clave** · 04 Diseño · 05 Reflexión (con índice lateral automático de `cs-nav.js`) → resultado en números (bloque negro, números en el color del caso) → próximo caso → contacto. Cada caso define su color con `<body style="--case:#HEX">`. Orden de los casos = orden de la home; "Case NN / TOTAL" y "Next project" siguen ese orden.
+> Este archivo no se publica: `.vercelignore` lo excluye del deploy.
+>
+> **Formato de caso:** está definido en la skill del agente portfolio (`references/caso-de-estudio.md` + `references/plantilla-caso.html`). Resumen: hero (kicker, titular igual al de la home, bajada, ficha Rol · Proyecto · Equipo · Alcance (sin años), **En corto**: Problema · Mi rol · Resultado, imagen 1920×788) → desafío + contexto/enfoque → secciones 01 Discovery · 02 Framing · 03 **Decisiones clave** · 04 Diseño · 05 Reflexión (con índice lateral automático de `cs-nav.js`) → resultado en números (bloque negro, números en el color del caso) → próximo caso → contacto. Cada caso define su color con `<body style="--case:#HEX">`. Orden de los casos = orden de la home; "Case NN / TOTAL" y "Next project" siguen ese orden.
 
 ## 0. Home · Diario digital (nov 2026)
 
@@ -30,6 +32,39 @@ Fuente de verdad para cualquier cambio, caso nuevo o rediseño. Si el sitio camb
 - **Portadas de proyectos:** cuadro de proporción fija con el color del caso y uno de tres tratamientos: `.bleed` (pantallas cortadas abajo, apoyadas en la base), `.float` (pieza completa, centrada con margen) o `.fill` (collage, de borde a borde). Un caso nuevo elige el tratamiento según cómo es su imagen.
 - Bilingüe con `<span data-lang>` + `i18n.js`. Los textos en español deben tener un largo parecido al inglés para no romper el hero ni la navegación.
 - Mobile: tocables de 44px o más, una columna, fotos en 4:3.
+
+## 0b. Casos actuales (nov 2026)
+
+| Orden | Caso | Archivo | `--case` | Rol | Visible |
+|---|---|---|---|---|---|
+| 1 | Tecito | `tecito.html` | `#D3DDCB` salvia | Fundador | siempre |
+| 2 | Heavy Rampers | `heavy-rampers-k7q4m2.html` | `#141414` negro + lima | Product Designer | solo /fintech |
+| 3 | Lemon Earn | `earn-k7q4m2.html` | `#E3D7FF` lavanda | Product Designer | solo /fintech |
+| 4 | We Join | `wejoin.html` | `#FFD146` amarillo | Product Designer | siempre |
+| 5 | Zerenly | `zerenly.html` | `#EBD2FD` lila | UX Designer | siempre |
+| 6 | Grido | `grido.html` | `#86CDE9` celeste | UX Designer | siempre |
+| 7 | Henry | `henry.html` | `#CBADFF` violeta | UX Designer | siempre |
+| — | Grape | `grape.html` | `#F5D1F5` rosa | Product Designer | sin link (se guarda por si vuelve) |
+
+**Casos de Lemon (ocultos):**
+- Se ven solo entrando por `/fintech` (un rewrite de `vercel.json` a `index.html`) o con `?hr=k7q4m2`. El script de `index.html` lo recuerda en `sessionStorage 'lemon'`.
+- En ese modo la home usa el layout B: Heavy y Earn en la columna lateral, y We Join, Zerenly, Grido y Henry en la fila de abajo. El contador pasa a "7 casos".
+- Sus páginas llevan `noindex` y no se enlazan desde la versión pública.
+- No llevan cifras absolutas del negocio.
+
+**Cadena de "Próximo proyecto":**
+- Tecito → We Join → Zerenly → Grido → Henry → Tecito.
+- Heavy → Earn → We Join.
+
+**Reglas de contenido:**
+- **Sin años.** No se pone el año de los proyectos viejos, para que no se lean como desactualizados.
+- **Rol según el proyecto.** La ficha dice el rol en ese proyecto, sin el nivel (Senior va solo en la home). La celda "Proyecto" dice el contexto ("Proyecto de cliente en Paisanos", "Lemon", "Proyecto propio").
+- **No inventar métricas.** Si no hay un número real, el resultado se cuenta con lo que se entregó o se aprendió. Ejemplo: We Join fue una prueba de concepto y lo dice.
+- **Voz natural.** Evitar los tics que suenan a texto generado:
+  - el contraste "no es X, es Y" repetido (como mucho uno por caso, en la cita destacada);
+  - los aforismos de cierre;
+  - frases como "hizo más que cualquier pantalla" o "una mirada que hoy llevo a todo brief".
+- **Decisiones.** Cada caso tiene tres, con las opciones consideradas, la elegida, el "Por qué" y el "Resigné".
 
 ## 1. Concepto
 
@@ -114,6 +149,5 @@ Regla: los acentos son **pasteles claros con `--accent-ink` casi negro**. El cas
 ## 7. Deuda conocida
 
 - Abundan los estilos inline en `index.html` (cards y stats). Al tocar algo, preferir mover a clases en lugar de sumar inline.
-- La bajada EN de Pinamed está copiada de Grape ("A banking platform…").
-- `wejoin.html` y `wejoin-export.html` cargan el panel de tweaks con React y Babel en producción, lo que pesa. `home-opciones.html` es una exploración.
-- La regla `.nav .inner` está duplicada en `styles.css`.
+- `styles.css` y `cs.css` no los carga ninguna página (revisado el 15/11/2026, Grape incluida). Se pueden borrar.
+- `tecito.html` tiene métricas de ejemplo (beta, turnos, ausencias, entrevistas) que hay que reemplazar por datos reales.
