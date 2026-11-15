@@ -135,22 +135,31 @@ window.va('beforeSend',function(ev){try{if(localStorage.getItem('va-disable'))re
     </div>
   </section>
   <script>
-  /* Unlisted case: the card only appears with the private key (?hr=<key>), which
-     is never written in this file. Without it the home stays exactly as is. */
+  /* Lemon cases: hidden from the public home. They only appear on /fintech (a Vercel
+     rewrite to this page) or with the old ?hr=k7q4m2 link, and the choice lasts the visit. */
   (function(){
-    var k=null;
-    try{k=new URLSearchParams(location.search).get('hr');if(k)sessionStorage.setItem('hr',k);else k=sessionStorage.getItem('hr');}catch(e){}
-    if(!k||!/^[a-z0-9]{6}$/.test(k))return;
+    var on=false;
+    try{on=/^\/fintech\/?$/.test(location.pathname)||new URLSearchParams(location.search).get('hr')==='k7q4m2';
+      if(on)sessionStorage.setItem('lemon','1');else on=sessionStorage.getItem('lemon')==='1';}catch(e){}
+    if(!on)return;
+    var k='k7q4m2';
     var side=document.querySelector('#work .row1 .side'),row2=document.querySelector('#work .row2'),zer=side&&side.querySelector('a[href="zerenly.html"]');
     if(!side||!row2||!zer)return;
-    var a=document.createElement('a');a.className='story';a.href='heavy-rampers-'+k+'.html';
-    a.innerHTML='<div class="ph fill" style="background:#141414"><img alt="Heavy Rampers screens"></div><div class="k mono">Fintech · Lemon</div><h3><span data-lang="en">Heavy Rampers: a limit that works as a door, not a wall</span><span data-lang="es">Heavy Rampers: el límite como puerta, no como muro</span></h3>';
-    var img=a.querySelector('img'),count=document.querySelector('#work .shead .mono'),before=count.innerHTML;
-    img.onerror=function(){a.remove();side.appendChild(zer);row2.classList.remove('hr3');count.innerHTML=before;try{sessionStorage.removeItem('hr')}catch(e){}};
-    img.src='assets/hr-'+k+'/card-hr.jpg';
-    side.insertBefore(a,side.firstChild);row2.insertBefore(zer,row2.firstChild);row2.classList.add('hr3');
-    count.innerHTML='<span data-lang="en">6 stories</span><span data-lang="es">6 casos</span>';
+    function card(href,alt,k_,en,es,src,bg){var a=document.createElement('a');a.className='story';a.href=href;
+      a.innerHTML='<div class="ph fill" style="background:'+bg+'"><img alt="'+alt+'"></div><div class="k mono">'+k_+'</div><h3><span data-lang="en">'+en+'</span><span data-lang="es">'+es+'</span></h3>';
+      a.dataset.src=src;return a;}
+    var count=document.querySelector('#work .shead .mono'),before=count.innerHTML;
     var st=document.createElement('style');st.textContent='@media (min-width:761px){#work .row2.hr3{grid-template-columns:1fr 1fr 1fr;gap:32px}#work .row2.hr3 h3{font-size:26px}}';document.head.appendChild(st);
+    var setCount=function(n){count.innerHTML='<span data-lang="en">'+n+' stories</span><span data-lang="es">'+n+' casos</span>';};
+    /* Both Lemon cases next to Tecito (layout B); We Join and Zerenly move down to a 2x2 second row. */
+    var hr=card('heavy-rampers-'+k+'.html','Heavy Rampers screens','Fintech · Lemon','Heavy Rampers: a limit that works as a door, not a wall','Heavy Rampers: el límite como puerta, no como muro','assets/hr-'+k+'/card-hr.jpg','#141414');
+    var ea=card('earn-'+k+'.html','Lemon Earn screens','Fintech · Lemon','Lemon Earn: invest up to an amount, not a fixed amount','Lemon Earn: invertir hasta un tope, no un monto fijo','assets/earn-'+k+'/card-earn.jpg','#E3D7FF');
+    var wj=side.querySelector('a[href="wejoin.html"]');
+    hr.querySelector('img').onerror=function(){hr.remove();ea.remove();side.appendChild(wj);side.appendChild(zer);row2.classList.remove('hr3');count.innerHTML=before;};
+    ea.querySelector('img').onerror=function(){ea.remove();if(hr.isConnected){side.appendChild(wj);row2.classList.add('hr3');setCount(6);}};
+    [hr,ea].forEach(function(c){c.querySelector('img').src=c.dataset.src;});
+    side.insertBefore(ea,side.firstChild);side.insertBefore(hr,side.firstChild);row2.insertBefore(zer,row2.firstChild);row2.insertBefore(wj,row2.firstChild);
+    setCount(7);
   })();
   </script>
 
