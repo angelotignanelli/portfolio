@@ -171,24 +171,24 @@ figcaption{margin-top:10px; font-size:13px; color:var(--muted);}
   .clients{display:none;}
 
   .shead h2{font-size:36px;}
-  .work{margin-top:64px;}
-  .row1, .row2{grid-template-columns:1fr; gap:36px; padding:28px 0;}
+  .work{margin-top:88px;}
+  .row1, .row2{grid-template-columns:1fr; gap:52px; padding:36px 0 44px;}
   .row1 .lead .ph, .row2 .ph{aspect-ratio:4/3;}
   .row2 .ph.float{aspect-ratio:16/10;}
   .row1 .lead h3{font-size:30px; line-height:1.06;}
   .row1 .lead p{font-size:17px;}
-  .side{padding-left:0; border-left:0; gap:36px; padding-top:28px; border-top:1px solid var(--rule);}
+  .side{padding-left:0; border-left:0; gap:52px; padding-top:40px; border-top:1px solid var(--rule);}
   .side h3, .row2 h3{font-size:24px;}
   .story .k{margin-top:12px;}
-  .row2{padding-top:28px;}
+  .row2{padding-top:40px; gap:52px;}
 
-  .opinion{margin-top:56px; padding:48px 0 8px;}
+  .opinion{margin-top:56px; padding:64px 0 8px;}
   .opinion blockquote{font-size:30px; line-height:1.15; margin-top:18px;}
   .opinion p{font-size:17px; margin-top:22px;}
   .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; width:100%; margin-top:32px; font-size:10px;}
   .stats b{font-size:40px;}
 
-  .writing{padding:64px 0 56px;}
+  .writing{padding:88px 0 72px;}
   .wgrid{grid-template-columns:1fr; gap:12px; padding-top:28px;}
   .col{padding:28px; display:grid; grid-template-columns:72px 1fr; column-gap:16px; align-items:center;}
   .col img{width:72px; height:72px; grid-row:span 2;}
@@ -201,7 +201,7 @@ figcaption{margin-top:10px; font-size:13px; color:var(--muted);}
   .post .lead{display:none;}
   .post .r{margin-left:auto; font-size:11px;}
 
-  .contact{padding:72px 0 64px;}
+  .contact{padding:96px 0 72px;}
   .contact .big{font-size:52px; line-height:.95;}
   .contact .big a{text-underline-offset:8px; text-decoration-thickness:2px;}
   .contact .links{font-size:14px; margin-top:24px;}
