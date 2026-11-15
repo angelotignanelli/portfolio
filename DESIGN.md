@@ -2,7 +2,7 @@
 
 Fuente de verdad para cualquier cambio, caso nuevo o rediseño. Si el sitio cambia, se actualiza este archivo.
 
-> **Estado (15 de noviembre de 2026):** todo el sitio usa el lenguaje "diario digital" de la sección 0: la home (`index.html` + `diario.css`) y los casos (`*.html` + `diario.css` + `caso.css`). Los casos actuales y sus reglas están en la sección 0b. Las secciones 1 a 6 describen el diseño **anterior** (`styles.css`, `cs.css`) y quedan como referencia histórica.
+> **Estado (15 de noviembre de 2026):** todo el sitio usa el lenguaje "diario digital" de la sección 0: la home (`index.html` + `diario.css`) y los casos (`*.html` + `diario.css` + `caso.css`). Los casos actuales y sus reglas están en la sección 0b. Las secciones 1 a 6 describen el diseño **anterior** y quedan como referencia histórica: sus hojas de estilo (`styles.css`, `cs.css`, `home.css`) se borraron el 15/11/2026.
 >
 > Este archivo no se publica: `.vercelignore` lo excluye del deploy.
 >
@@ -149,5 +149,5 @@ Regla: los acentos son **pasteles claros con `--accent-ink` casi negro**. El cas
 ## 7. Deuda conocida
 
 - Abundan los estilos inline en `index.html` (cards y stats). Al tocar algo, preferir mover a clases en lugar de sumar inline.
-- `styles.css` y `cs.css` no los carga ninguna página (revisado el 15/11/2026, Grape incluida). Se pueden borrar.
+
 - `tecito.html` tiene métricas de ejemplo (beta, turnos, ausencias, entrevistas) que hay que reemplazar por datos reales.
