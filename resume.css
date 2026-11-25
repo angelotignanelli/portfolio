@@ -85,3 +85,22 @@
   .rs-edu .t{font-size:19px;}
   .rs-two{grid-template-columns:1fr; gap:0;}
 }
+
+/* ---------- logos de empresas e instituciones ---------- */
+.rs-name{display:flex; align-items:center; gap:16px;}
+.rs-logo{flex:none; width:48px; height:48px; border-radius:12px; overflow:hidden; background:#fff; box-shadow:inset 0 0 0 1px var(--rule); display:grid; place-items:center;}
+.rs-logo img{width:100%; height:100%; object-fit:cover;}
+.rs-logo.mono-tile{background:#EDEAE2; box-shadow:none; font-family:var(--serif); font-weight:600; font-size:24px; color:var(--ink);}
+.rs-mini .rs-logo{width:40px; height:40px; border-radius:10px;}
+.rs-mini .rs-logo.mono-tile{font-size:20px;}
+.rs-logo.sm{width:40px; height:40px; border-radius:10px;}
+.rs-logo.sm.mono-tile{font-size:20px;}
+.rs-edu li{grid-template-columns:40px 1fr auto; column-gap:18px; align-items:start;}
+.rs-edu li .rs-logo{grid-row:1 / span 2;}
+.rs-edu .w{grid-column:2;}
+.rs-edu .y{grid-column:3;}
+@media (max-width:760px){
+  .rs-name{gap:12px;}
+  .rs-logo{width:40px; height:40px; border-radius:10px;}
+  .rs-mini .rs-name{align-items:flex-start;}
+}
