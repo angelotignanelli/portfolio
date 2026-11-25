@@ -217,3 +217,18 @@ figcaption{margin-top:10px; font-size:13px; color:var(--muted);}
 .story .newtag + .k{margin-top:12px;}
 .ticker .track > span.news{color:var(--accent);}
 @media (max-width:760px){ .newtag{font-size:11px; margin-top:14px;} }
+
+/* Con "CV" en el menú, en español no entra en teléfonos angostos: menos aire y un punto menos de letra. */
+@media (max-width:420px){
+  .nav{font-size:13px;}
+  .nav a{padding:14px 4px;}
+  .nav .lang{font-size:11px;}
+  .nav .lang button{padding:14px 2px;}
+}
+@media (max-width:370px){
+  .nav{font-size:12px;}
+  .nav a{padding:14px 3px;}
+  .nav .lang{font-size:10px;}
+  .nav .lang button{padding:14px 1px;}
+}
+@media (max-width:330px){ .nav a{padding:14px 2px;} }
