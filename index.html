@@ -143,23 +143,26 @@ window.va('beforeSend',function(ev){try{if(localStorage.getItem('va-disable'))re
       if(on)sessionStorage.setItem('lemon','1');else on=sessionStorage.getItem('lemon')==='1';}catch(e){}
     if(!on)return;
     var k='k7q4m2';
-    var side=document.querySelector('#work .row1 .side'),row2=document.querySelector('#work .row2'),zer=side&&side.querySelector('a[href="zerenly.html"]');
-    if(!side||!row2||!zer)return;
+    var side=document.querySelector('#work .row1 .side'),row2=document.querySelector('#work .row2'),zer=side&&side.querySelector('a[href="zerenly.html"]'),wj=side&&side.querySelector('a[href="wejoin.html"]');
+    if(!side||!row2||!zer||!wj)return;
     function card(href,alt,k_,en,es,src,bg){var a=document.createElement('a');a.className='story';a.href=href;
       a.innerHTML='<div class="ph fill" style="background:'+bg+'"><img alt="'+alt+'"></div><div class="k mono">'+k_+'</div><h3><span data-lang="en">'+en+'</span><span data-lang="es">'+es+'</span></h3>';
       a.dataset.src=src;return a;}
     var count=document.querySelector('#work .shead .mono'),before=count.innerHTML;
     var st=document.createElement('style');st.textContent='@media (min-width:761px){#work .row2.hr3{grid-template-columns:1fr 1fr 1fr;gap:32px}#work .row2.hr3 h3{font-size:26px}}';document.head.appendChild(st);
     var setCount=function(n){count.innerHTML='<span data-lang="en">'+n+' stories</span><span data-lang="es">'+n+' casos</span>';};
-    /* Both Lemon cases next to Tecito (layout B); We Join and Zerenly move down to a 2x2 second row. */
+    /* Heavy and Earn next to Tecito (layout B). Below: Pago de servicios, We Join and Zerenly in three columns; Grido and Henry stay in row2. */
     var hr=card('heavy-rampers-'+k+'.html','Heavy Rampers screens','Fintech · Lemon','Heavy Rampers: a limit that works as a door, not a wall','Heavy Rampers: el límite como puerta, no como muro','assets/hr-'+k+'/card-hr.jpg','#141414');
     var ea=card('earn-'+k+'.html','Lemon Earn screens','Fintech · Lemon','Lemon Earn: invest up to an amount, not a fixed amount','Lemon Earn: invertir hasta un tope, no un monto fijo','assets/earn-'+k+'/card-earn.jpg','#E3D7FF');
-    var wj=side.querySelector('a[href="wejoin.html"]');
-    hr.querySelector('img').onerror=function(){hr.remove();ea.remove();side.appendChild(wj);side.appendChild(zer);row2.classList.remove('hr3');count.innerHTML=before;};
-    ea.querySelector('img').onerror=function(){ea.remove();if(hr.isConnected){side.appendChild(wj);row2.classList.add('hr3');setCount(6);}};
-    [hr,ea].forEach(function(c){c.querySelector('img').src=c.dataset.src;});
-    side.insertBefore(ea,side.firstChild);side.insertBefore(hr,side.firstChild);row2.insertBefore(zer,row2.firstChild);row2.insertBefore(wj,row2.firstChild);
-    setCount(7);
+    var sv=card('servicios-'+k+'.html','Bill payment screens','Fintech · Lemon · Perú','Pago de servicios: paying bills without knowing which number to type','Pago de servicios: pagar una factura sin saber qué número cargar','assets/servicios-'+k+'/card-servicios.jpg','#D4E2F7');
+    var mid=document.createElement('div');mid.className='row2 hr3';
+    hr.querySelector('img').onerror=function(){hr.remove();ea.remove();sv.remove();side.appendChild(wj);side.appendChild(zer);mid.remove();count.innerHTML=before;};
+    ea.querySelector('img').onerror=function(){if(!hr.isConnected)return;ea.remove();side.appendChild(wj);setCount(sv.isConnected?7:6);};
+    sv.querySelector('img').onerror=function(){if(!hr.isConnected)return;sv.remove();setCount(ea.isConnected?7:6);};
+    side.insertBefore(ea,side.firstChild);side.insertBefore(hr,side.firstChild);
+    mid.appendChild(sv);mid.appendChild(wj);mid.appendChild(zer);row2.parentNode.insertBefore(mid,row2);
+    [hr,ea,sv].forEach(function(c){c.querySelector('img').src=c.dataset.src;});
+    setCount(8);
   })();
   </script>
 

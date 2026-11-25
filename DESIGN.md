@@ -40,21 +40,22 @@ Fuente de verdad para cualquier cambio, caso nuevo o rediseño. Si el sitio camb
 | 1 | Tecito | `tecito.html` | `#D3DDCB` salvia | Fundador | siempre |
 | 2 | Heavy Rampers | `heavy-rampers-k7q4m2.html` | `#141414` negro + lima | Product Designer | solo /fintech |
 | 3 | Lemon Earn | `earn-k7q4m2.html` | `#E3D7FF` lavanda | Product Designer | solo /fintech |
-| 4 | We Join | `wejoin.html` | `#FFD146` amarillo | Product Designer | siempre |
-| 5 | Zerenly | `zerenly.html` | `#EBD2FD` lila | UX Designer | siempre |
-| 6 | Grido | `grido.html` | `#86CDE9` celeste | UX Designer | siempre |
-| 7 | Henry | `henry.html` | `#CBADFF` violeta | UX Designer | siempre |
+| 4 | Pago de servicios (Perú) | `servicios-k7q4m2.html` | `#D4E2F7` celeste + `#1F4C9A` | Product Designer | solo /fintech |
+| 5 | We Join | `wejoin.html` | `#FFD146` amarillo | Product Designer | siempre |
+| 6 | Zerenly | `zerenly.html` | `#EBD2FD` lila | UX Designer | siempre |
+| 7 | Grido | `grido.html` | `#86CDE9` celeste | UX Designer | siempre |
+| 8 | Henry | `henry.html` | `#CBADFF` violeta | UX Designer | siempre |
 | — | Grape | `grape.html` | `#F5D1F5` rosa | Product Designer | sin link (se guarda por si vuelve) |
 
 **Casos de Lemon (ocultos):**
 - Se ven solo entrando por `/fintech` (un rewrite de `vercel.json` a `index.html`) o con `?hr=k7q4m2`. El script de `index.html` lo recuerda en `sessionStorage 'lemon'`.
-- En ese modo la home usa el layout B: Heavy y Earn en la columna lateral, y We Join, Zerenly, Grido y Henry en la fila de abajo. El contador pasa a "7 casos".
+- En ese modo la home usa el layout B: Heavy y Earn en la columna lateral. Debajo, una fila de tres con Pago de servicios, We Join y Zerenly, y después Grido y Henry. El contador pasa a "8 casos".
 - Sus páginas llevan `noindex` y no se enlazan desde la versión pública.
 - No llevan cifras absolutas del negocio.
 
 **Cadena de "Próximo proyecto":**
 - Tecito → We Join → Zerenly → Grido → Henry → Tecito.
-- Heavy → Earn → We Join.
+- Heavy → Earn → Pago de servicios → We Join.
 
 **Reglas de contenido:**
 - **Sin años.** No se pone el año de los proyectos viejos, para que no se lean como desactualizados.
