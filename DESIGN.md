@@ -10,7 +10,7 @@ Fuente de verdad para cualquier cambio, caso nuevo o rediseño. Si el sitio camb
 
 ## 0. Home · Diario digital (nov 2026)
 
-**Concepto:** la home se lee como la portada de un diario digital sobre tu trabajo. El tono es cálido y con humor ("Product designer says business and users *can agree*") y cada recurso de diario se usa una sola vez.
+**Concepto:** la home se lee como la portada de un diario digital sobre tu trabajo. El diseño toma recursos de diario (cabezal, ticker, filetes), pero el texto habla en primera persona y sin formato de noticia: el titular es "I design products where business and users *meet*" / "Diseño productos donde negocio y usuarios *coinciden*", en 3 líneas, y la bajada no pasa de 2 líneas en desktop. Cada recurso de diario se usa una sola vez.
 
 **Tokens** (`diario.css :root`):
 - Papel `#F7F5F0`, tinta `#121212`, texto secundario `#3D3D3D` / `#5E5E5E`, filetes `rgba(18,18,18,.2)`, acento `#FFD146` (solo como resaltador).
