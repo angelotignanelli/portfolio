@@ -47,6 +47,8 @@ Fuente de verdad para cualquier cambio, caso nuevo o rediseño. Si el sitio camb
 | 8 | Henry | `henry.html` | `#CBADFF` violeta | UX Designer | siempre |
 | — | Grape | `grape.html` | `#F5D1F5` rosa | Product Designer | sin link (se guarda por si vuelve) |
 
+**Cards de la home:** la etiqueta gris empieza con la empresa ("WE JOIN · MARKETPLACE", "LEMON · FINTECH") y el título no repite el nombre. Excepciones: Tecito, que tiene sello y descripción, va sin etiqueta y con el nombre en el título; los casos de Lemon llevan el producto al inicio del título ("Heavy Rampers: …"). Los títulos en la columna lateral no pasan de 2 líneas.
+
 **Casos de Lemon (ocultos):**
 - Se ven solo entrando por `/fintech` (un rewrite de `vercel.json` a `index.html`) o con `?hr=k7q4m2`. El script de `index.html` lo recuerda en `sessionStorage 'lemon'`.
 - En ese modo la home usa el layout B: Heavy y Earn en la columna lateral, y debajo el 2×2 con Pago de servicios, We Join, Zerenly y Henry. Grido no aparece en /fintech (es una auditoría de retail, el más flojo para fintech). El contador pasa a "7 casos".

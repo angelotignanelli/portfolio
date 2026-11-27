@@ -91,15 +91,15 @@ figcaption{margin-top:10px; font-size:13px; color:var(--muted);}
 .ph.float img{left:4%; top:0; width:92%; height:100%; object-fit:contain; object-position:center; transform-origin:center;}
 .ph.fill img{object-fit:cover; object-position:center; transform-origin:center;}
 .story:hover h3{text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:5px;}
-.story .k{margin-top:14px; font-size:11px;}
-.story h3{margin:6px 0 0; font-family:var(--serif); font-weight:600; letter-spacing:-.02em; line-height:1.08;}
-.row1{display:grid; grid-template-columns:8fr 4fr; gap:40px; padding:36px 0; border-bottom:1px solid var(--ink);}
+.story .k{margin-top:20px; font-size:11px;}
+.story h3{margin:10px 0 0; font-family:var(--serif); font-weight:600; letter-spacing:-.02em; line-height:1.14;}
+.row1{display:grid; grid-template-columns:8fr 4fr; gap:40px; padding:44px 0; border-bottom:1px solid var(--ink);}
 .row1 .lead .ph{aspect-ratio:16/10; background:#FFD146;}
-.row1 .lead h3{font-size:46px; line-height:1.02;}
-.row1 .lead p{margin:12px 0 0; font-family:var(--serif); font-size:18px; line-height:1.5; color:var(--ink-2); max-width:620px;}
-.side{display:flex; flex-direction:column; gap:28px; padding-left:32px; border-left:1px solid var(--rule);}
+.row1 .lead h3{font-size:46px; line-height:1.08;}
+.row1 .lead p{margin:16px 0 0; font-family:var(--serif); font-size:18px; line-height:1.5; color:var(--ink-2); max-width:620px;}
+.side{display:flex; flex-direction:column; gap:44px; padding-left:32px; border-left:1px solid var(--rule);}
 .side h3{font-size:26px;}
-.row2{display:grid; grid-template-columns:1fr 1fr; gap:40px; padding-top:36px;}
+.row2{display:grid; grid-template-columns:1fr 1fr; gap:56px 48px; padding-top:44px;}
 .row2 .ph{aspect-ratio:16/10;}
 .row2 h3{font-size:30px;}
 
@@ -185,7 +185,7 @@ figcaption{margin-top:10px; font-size:13px; color:var(--muted);}
   .row1 .lead p{font-size:17px;}
   .side{padding-left:0; border-left:0; gap:56px; padding-top:0; border-top:0;}
   .side h3, .row2 h3{font-size:24px;}
-  .story .k{margin-top:12px;}
+  .story .k{margin-top:16px;}
   .row2{padding-top:56px; gap:56px;}
 
   .opinion{margin-top:56px; padding:64px 0 8px;}
@@ -216,7 +216,7 @@ figcaption{margin-top:10px; font-size:13px; color:var(--muted);}
 
 /* Nota nueva: sello amarillo sobre el titular de la nota de tapa, y aviso en el ticker. */
 .newtag{display:inline-block; margin-top:16px; padding:6px 10px; background:var(--accent); color:var(--ink); font-size:11px; font-weight:500;}
-.story .newtag + .k{margin-top:12px;}
+.story .newtag + .k, .story .newtag + h3{margin-top:16px;}
 .ticker .track > span.news{color:var(--accent);}
 @media (max-width:760px){ .newtag{font-size:11px; margin-top:14px;} }
 

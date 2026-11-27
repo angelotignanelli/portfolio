@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="diario.css?v=24">
+<link rel="stylesheet" href="diario.css?v=25">
 <link rel="stylesheet" href="motion.css?v=3">
 <script>
 /* Analytics: abrí el sitio con ?notrack para no contar las visitas de este navegador (?track lo vuelve a activar). */
@@ -105,33 +105,32 @@ window.va('beforeSend',function(ev){try{if(localStorage.getItem('va-disable'))re
       <a class="story lead" href="tecito.html">
         <div class="ph fill" style="background:#D3DDCB"><picture data-lang="en"><source media="(max-width:760px)" srcset="assets/card-tecito-m-en.jpg"><img src="assets/card-tecito-en.jpg" alt="Tecito screens"></picture><picture data-lang="es"><source media="(max-width:760px)" srcset="assets/card-tecito-m-es.jpg"><img src="assets/card-tecito-es.jpg" alt="Tecito screens"></picture></div>
         <div class="newtag mono">● <span data-lang="en">New · Designed &amp; built 100% with AI</span><span data-lang="es">Nuevo · Diseñado y construido 100% con IA</span></div>
-        <div class="k mono">Healthtech · 0→1</div>
         <h3><span data-lang="en">Tecito: a practice that books itself</span><span data-lang="es">Tecito: un consultorio que se agenda solo</span></h3>
         <p><span data-lang="en">Online booking for health professionals, from first commit to production in seven weeks with Claude Code, GitHub and Vercel.</span><span data-lang="es">Turnos online para profesionales de la salud, del primer commit a producción en siete semanas con Claude Code, GitHub y Vercel.</span></p>
       </a>
       <div class="side">
         <a class="story" href="wejoin.html">
           <div class="ph bleed zoom" style="background:#FFD146"><img src="assets/card-wejoin.webp" alt="WeJoin screens"></div>
-          <div class="k mono">Marketplace</div>
-          <h3><span data-lang="en">We Join: from distrust to a tracked, transparent job</span><span data-lang="es">We Join: de la desconfianza a un trabajo seguido y transparente</span></h3>
+          <div class="k mono">We Join · Marketplace</div>
+        <h3><span data-lang="en">From distrust to a transparent job</span><span data-lang="es">De la desconfianza a un trabajo transparente</span></h3>
         </a>
         <a class="story" href="zerenly.html">
           <div class="ph bleed crop" style="background:#EBD2FD"><img src="assets/card-zerenly.webp" alt="Zerenly screens"></div>
-          <div class="k mono"><span data-lang="en">Health</span><span data-lang="es">Salud</span></div>
-          <h3><span data-lang="en">Zerenly: emotional support closer to those who need it</span><span data-lang="es">Zerenly: el apoyo emocional más cerca de quien lo necesita</span></h3>
+          <div class="k mono"><span data-lang="en">Zerenly · Health</span><span data-lang="es">Zerenly · Salud</span></div>
+        <h3><span data-lang="en">Emotional support closer to those who need it</span><span data-lang="es">El apoyo emocional más cerca de quien lo necesita</span></h3>
         </a>
       </div>
     </div>
     <div class="row2">
       <a class="story" href="grido.html">
         <div class="ph fill" style="background:#86CDE9"><img src="assets/card-grido.webp" alt="Grido screens"></div>
-        <div class="k mono"><span data-lang="en">Retail · Audit</span><span data-lang="es">Retail · Auditoría</span></div>
-        <h3><span data-lang="en">Grido: an audit that became a roadmap</span><span data-lang="es">Grido: una auditoría que se convirtió en roadmap</span></h3>
+        <div class="k mono"><span data-lang="en">Grido · Retail · Audit</span><span data-lang="es">Grido · Retail · Auditoría</span></div>
+        <h3><span data-lang="en">An audit that became a roadmap</span><span data-lang="es">Una auditoría que se convirtió en roadmap</span></h3>
       </a>
       <a class="story" href="henry.html">
         <div class="ph float" style="background:#CBADFF"><img src="assets/card-henry.webp" alt="Henry screens"></div>
-        <div class="k mono">Edtech</div>
-        <h3><span data-lang="en">Henry: from five platforms to one experience</span><span data-lang="es">Henry: de cinco plataformas a una sola experiencia</span></h3>
+        <div class="k mono">Henry · Edtech</div>
+        <h3><span data-lang="en">From five platforms to one experience</span><span data-lang="es">De cinco plataformas a una sola experiencia</span></h3>
       </a>
     </div>
   </section>
@@ -153,9 +152,9 @@ window.va('beforeSend',function(ev){try{if(localStorage.getItem('va-disable'))re
     var st=document.createElement('style');st.textContent='@media (min-width:761px){#work .row2.hr3{grid-template-columns:1fr 1fr 1fr;gap:32px}#work .row2.hr3 h3{font-size:26px}}';document.head.appendChild(st);
     var setCount=function(n){count.innerHTML='<span data-lang="en">'+n+' stories</span><span data-lang="es">'+n+' casos</span>';};
     /* Heavy and Earn next to Tecito (layout B). Below, the 2x2: Pago de servicios, We Join, Zerenly and Henry. Grido stays only on the public home. */
-    var hr=card('heavy-rampers-'+k+'.html','Heavy Rampers screens','Fintech · Lemon','Heavy Rampers: a limit that works as a door, not a wall','Heavy Rampers: el límite como puerta, no como muro','assets/hr-'+k+'/card-hr.jpg','#141414');
-    var ea=card('earn-'+k+'.html','Lemon Earn screens','Fintech · Lemon','Lemon Earn: invest up to an amount, not a fixed amount','Lemon Earn: invertir hasta un tope, no un monto fijo','assets/earn-'+k+'/card-earn.jpg','#E3D7FF');
-    var sv=card('servicios-'+k+'.html','Bill payment screens','Fintech · Lemon · Perú','Pago de servicios: paying bills without knowing which number to type','Pago de servicios: pagar una factura sin saber qué número cargar','assets/servicios-'+k+'/card-servicios.jpg','#D4E2F7');
+    var hr=card('heavy-rampers-'+k+'.html','Heavy Rampers screens','Lemon · Fintech','Heavy Rampers: a limit that works as a door, not a wall','Heavy Rampers: el límite como puerta, no como muro','assets/hr-'+k+'/card-hr.jpg','#141414');
+    var ea=card('earn-'+k+'.html','Lemon Earn screens','Lemon · Fintech','Lemon Earn: invest up to an amount, not a fixed amount','Lemon Earn: invertir hasta un tope, no un monto fijo','assets/earn-'+k+'/card-earn.jpg','#E3D7FF');
+    var sv=card('servicios-'+k+'.html','Bill payment screens','Lemon · Fintech · Perú','Pago de servicios: paying bills without knowing which number to type','Pago de servicios: pagar una factura sin saber qué número cargar','assets/servicios-'+k+'/card-servicios.jpg','#D4E2F7');
     var gr=row2.querySelector('a[href="grido.html"]');
     hr.querySelector('img').onerror=function(){hr.remove();ea.remove();sv.remove();side.appendChild(wj);side.appendChild(zer);if(gr)row2.insertBefore(gr,row2.firstChild);count.innerHTML=before;};
     ea.querySelector('img').onerror=function(){if(!hr.isConnected)return;ea.remove();setCount(sv.isConnected?6:5);};
